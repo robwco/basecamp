@@ -94,5 +94,68 @@
 </div>
 
 
+<div class="max-w-5xl mx-auto mt-12">
+	<h1 class="text-5xl font-extrabold mb-12">project #4: charm’s email support app design update</h1>
+</div>
+
+<div class="max-w-full mx-auto mb-36 flex flex-col md:flex-row items-end" style="max-width: 1600px;">
+	<div class="md:w-5/12 m-12">
+		<div class="text-center w-full">
+			<div class="callout before mx-auto text-lg">before</div>
+		</div>
+		<p class="mt-6 mb-12">
+			this was an email support app that originally launched in 2008 but was shutdown shortly after due to technical problems. the old app had a great design but it’s codebase was no longer usable. my goal was to keep the overall design while updating certain elements that looked dated.
+		</p>
+		<img src="./folyo-before.png" class="max-w-full rounded">
+	</div>
+
+	<div class="md:w-7/12 m-12">
+		<div class="text-center w-full">
+			<div class="callout after mx-auto text-lg">after</div>
+		</div>
+		<p class="mt-6 mb-12">
+			it took about a month to recreate charm’s design. i worked with a single developer to build a working prototype from scratch within about a month.
+		</p>
+		<img src="./folyo-after.png" class="max-w-full rounded">
+	</div>
+</div>
+
+
+<div class="max-w-5xl mx-auto mt-12">
+	<h1 class="text-5xl font-extrabold mb-12">project #5: charm’s tabs</h1>
+	<p>since everything so far has been really high-level, i thought i'd close with a closer look at a specific design problem that i worked on during the month we updated charm…</p>
+</div>
+
+<div class="max-w-full mx-auto mb-36 flex flex-col md:flex-row items-end" style="max-width: 1600px;">
+	<div class="md:w-5/12 m-12">
+		<div class="text-center w-full">
+			<div class="callout before mx-auto text-lg">before</div>
+		</div>
+		<p class="mt-6 mb-12">
+			the previous version of the app had a fun and distinctive navigation system but presented some usability problems:
+
+using these button/tabs is confusing because you expect a button labeled "Process" to actually process something when clicked. it instead takes you to the process page. 
+it also doesn't indicate where you are inside the app very well. the triangle indicator below the tab looks like a tooltip instead of a tab.
+my goal was to keep the feel of the colors and tabs but fix the usability problems they presented.
+		</p>
+		<img src="./folyo-before.png" class="max-w-full rounded">
+	</div>
+
+	<div class="md:w-7/12 m-12">
+		<div class="text-center w-full">
+			<div class="callout after mx-auto text-lg">after</div>
+		</div>
+		<p class="mt-6 mb-12">
+			(the image below is a gif, click the play button to see how the tab animations work)
+it was a big challenge to redesign these tabs and took a long time to come to a solution. almost everything i tried either lost the distinctive colors or presented new usability problems. the solution was to:
+
+rename the process tab to “Inbox” which makes it more clear you’re not taking an action but instead going somewhere. 
+lose the triangle to indicate which tab you’re on, and instead use shading and hover animations.
+		</p>
+		<img src="./folyo-after.png" class="max-w-full rounded">
+	</div>
+</div>
+
+
 </body>
 </html>
