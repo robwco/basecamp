@@ -5,7 +5,7 @@
 	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<link rel="stylesheet" type="text/css" href="/basecamp/property-of-basecamp.css" />
-	<link rel="stylesheet" type="text/css" href="/basecamp/drag-and-drop.css" />
+	<link rel="stylesheet" type="text/css" href="/basecamp/set-aside-drag-and-drop.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
@@ -40,35 +40,33 @@
 						Card Content
 					</article>
 
-							<ul
-		            class="drag-and-drop__items"
-		            :class="{ 'drag-and-drop__items--removing': removing }"
-		            x-on:drop="removing = false"
-		            x-on:drop.prevent="
-		                const target = event.target.closest('ul');
-		                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
-		                target.appendChild(element);
-		            "
-		            x-on:dragover.prevent="removing = true"
-		            x-on:dragleave.prevent="removing = false">
-		            <!-- loop through the items -->
-		            <li
-		                id="item-1"
-		                class="card drag-and-drop__item"
-		                :class="{ 'drag-and-drop__item--dragging': dragging }"
-		                x-on:dragstart.self="
-		                    dragging = true;
-		                    event.dataTransfer.effectAllowed='move';
-		                    event.dataTransfer.setData('text/plain', event.target.id);
-		                "
-		                x-on:dragend="dragging = false"
-		                x-data="{ dragging: false }"
-		                draggable="true">
-		                <h1>Test Project</h1>
-		                <h1>Jason Fried</h1>
-		            </li>
-
-		          </ul>
+					<ul
+            class="drag-and-drop__items"
+            :class="{ 'drag-and-drop__items--removing': removing }"
+            x-on:drop="removing = false"
+            x-on:drop.prevent="
+                const target = event.target.closest('ul');
+                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
+                target.appendChild(element);
+            "
+            x-on:dragover.prevent="removing = true"
+            x-on:dragleave.prevent="removing = false">
+            <!-- loop through the items -->
+            <li
+                id="item-1"
+                class="card drag-and-drop__item"
+                :class="{ 'drag-and-drop__item--dragging': dragging }"
+                x-on:dragstart.self="
+                    dragging = true;
+                    event.dataTransfer.effectAllowed='move';
+                    event.dataTransfer.setData('text/plain', event.target.id);
+                "
+                x-on:dragend="dragging = false"
+                x-data="{ dragging: false }"
+                draggable="true">
+                <h1>Test Project</h1>
+            </li>
+          </ul>
 
 
 				</section>
@@ -103,7 +101,6 @@
 		                x-data="{ dragging: false }"
 		                draggable="true">
 		                <h1>Test Project</h1>
-		                <h1>Jason Fried</h1>
 		            </li>
 		            <li
 		                id="item-2"

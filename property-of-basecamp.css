@@ -130,6 +130,18 @@
     --color-collection: rgb(var(--rgb-green));
 }
 
+html {
+    background: var(--color-bg--main);
+    color: var(--color-txt);
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: 1.4;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 4rem;
+    scroll-padding-bottom: 6rem;
+}
+
+
 body {
     font-size: var(--font-size-medium);
     padding: 0 0 var(--body-padding);
