@@ -199,6 +199,11 @@ h1, .hdg--xx-large {
 , var(--color-secondary) 0%, var(--color-tertiary) 100%);
 }
 
+.sheet-actions {
+    top: -3rem !important;
+    right: -3rem !important;
+}
+
 .btn--icon {
     padding-left: 2.2em;
     position: relative;
