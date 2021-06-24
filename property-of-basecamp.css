@@ -148,6 +148,10 @@ body {
     margin: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
+.u-relative {
+    position: relative;
+}
+
 .page__content {
     max-width: var(--content-width);
     margin: 0 auto;
