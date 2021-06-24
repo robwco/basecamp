@@ -20,6 +20,10 @@
 			  <p>  
 			  	Everything you’ve marked as Set Aside.
 			  </p>
+
+			  <div class="sheet-actions">
+        	<a title="Write in new window with SHIFT+W" class="btn btn--outlined-tertiary btn--icon btn--icon-new u-show@desktop" aria-label="Write a new message" data-controller="hotkey" data-hotkey="c,w" href="/messages/new">Write</a>
+      	</div>
 			</header>
 
 			<div class="inboxes">
@@ -53,7 +57,24 @@
 		                target.appendChild(element);
 		            "
 		            x-on:dragover.prevent="adding = true"
-		            x-on:dragleave.prevent="adding = false">
+		            x-on:dragleave.prevent="adding = false"
+								x-on:dragover.prevent="removing = true"
+            		x-on:dragleave.prevent="removing = false"
+
+
+
+		             class="drag-and-drop__items"
+            :class="{ 'drag-and-drop__items--removing': removing }"
+            x-on:drop="removing = false"
+            x-on:drop.prevent="
+                const id = event.dataTransfer.getData('text/plain');
+                const target = event.target.closest('ul');
+                const element = document.getElementById(id);
+                target.appendChild(element);
+            "
+
+
+            >
 									<div
 			                id="item-13"
 			                class="card drag-and-drop__item"

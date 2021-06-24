@@ -185,3 +185,16 @@ h1, .hdg--xx-large {
     overflow: hidden;
     box-shadow: 0 0 3rem var(--color-shadow);
 }
+
+.hdg--divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    z-index: -1;
+    background: linear-gradient(
+135deg
+, var(--color-secondary) 0%, var(--color-tertiary) 100%);
+}
