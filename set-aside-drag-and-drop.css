@@ -10,7 +10,6 @@
 }
 .drag-and-drop__title {
   color: orange;
-
 }
 .drag-and-drop__items {
   position: relative;
@@ -32,8 +31,8 @@
   background-color: lightblue;
 }
 .drag-and-drop__item--dragging {
-  color: #000 !important;
-  background-color: #EFEFEF !important;
+  color: yellow !important;
+  background-color: gray !mediumpurple;
   opacity: .20;
   border: 2px dashed #B2B2B2;
 }
