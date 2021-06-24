@@ -40,7 +40,7 @@
 						Card Content
 					</article>
 
-							        <ul
+							<ul
 		            class="drag-and-drop__items"
 		            :class="{ 'drag-and-drop__items--removing': removing }"
 		            x-on:drop="removing = false"
@@ -54,7 +54,7 @@
 		            <!-- loop through the items -->
 		            <li
 		                id="item-1"
-		                class="drag-and-drop__item"
+		                class="card drag-and-drop__item"
 		                :class="{ 'drag-and-drop__item--dragging': dragging }"
 		                x-on:dragstart.self="
 		                    dragging = true;
@@ -70,7 +70,7 @@
 
 		          </ul>
 
-		          
+
 				</section>
 			</div>
 		</div>
