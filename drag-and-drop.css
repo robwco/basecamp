@@ -50,9 +50,6 @@
 .drag-and-drop__item--dragging {
   color: #ccc !important;
   background-color: #fff !important;
-}
-
-.drag-and-drop__item--dragging h1 }
-  font-size: 15px;
-  opacity: .75;
+  opacity: .20;
+  border: 2px dashed #B2B2B2;
 }
