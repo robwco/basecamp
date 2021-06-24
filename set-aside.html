@@ -25,19 +25,6 @@
 			<div class="inboxes">
 				<div class="drag-and-drop" x-data="{ adding: false, removing: false }">
 					<section id="postings drag-and-drop__items" class="cards push--top">
-						<div								
-							class="drag-and-drop__items"
-	            :class="{ 'drag-and-drop__items--adding': adding }"
-	            x-on:drop="adding = false"
-	            x-on:drop.prevent="
-	                const target = event.target.closest('div');
-	                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
-	                target.appendChild(element);
-	            "
-	            x-on:dragover.prevent="adding = true"
-	            x-on:dragleave.prevent="adding = false">
-						</div>
-
 						<article 
 							class="card" 
 	            id="item-14"
@@ -133,23 +120,6 @@
 					</section>
 				</div>
 			</div>
-
-
-		    <div class="drag-and-drop__container drag-and-drop__container--from">
-		        <h3 class="drag-and-drop__title">Basecamp Application</h3>
-		        <ul
-		            class="drag-and-drop__items"
-		            :class="{ 'drag-and-drop__items--removing': removing }"
-		            x-on:drop="removing = false"
-		            x-on:drop.prevent="
-		                const target = event.target.closest('ul');
-		                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
-		                target.appendChild(element);
-		                "
-		            x-on:dragover.prevent="removing = true"
-		            x-on:dragleave.prevent="removing = false">
-		         </ul>
-		    </div>
 		</div>
 	</main>
 </body>
