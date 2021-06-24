@@ -39,6 +39,38 @@
 					<article class="card">
 						Card Content
 					</article>
+
+							        <ul
+		            class="drag-and-drop__items"
+		            :class="{ 'drag-and-drop__items--removing': removing }"
+		            x-on:drop="removing = false"
+		            x-on:drop.prevent="
+		                const target = event.target.closest('ul');
+		                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
+		                target.appendChild(element);
+		            "
+		            x-on:dragover.prevent="removing = true"
+		            x-on:dragleave.prevent="removing = false">
+		            <!-- loop through the items -->
+		            <li
+		                id="item-1"
+		                class="drag-and-drop__item"
+		                :class="{ 'drag-and-drop__item--dragging': dragging }"
+		                x-on:dragstart.self="
+		                    dragging = true;
+		                    event.dataTransfer.effectAllowed='move';
+		                    event.dataTransfer.setData('text/plain', event.target.id);
+		                "
+		                x-on:dragend="dragging = false"
+		                x-data="{ dragging: false }"
+		                draggable="true">
+		                <h1>Test Project</h1>
+		                <h1>Jason Fried</h1>
+		            </li>
+
+		          </ul>
+
+		          
 				</section>
 			</div>
 		</div>
