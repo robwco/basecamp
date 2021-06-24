@@ -28,7 +28,27 @@
 
 			<div class="inboxes">
 				<div class="drag-and-drop" x-data="{ adding: false, removing: false }">
+
+
 					<section id="postings drag-and-drop__items" class="cards push--top">
+						<article 
+	            id="item-14"
+	            class="card drag-and-drop__item"
+	            :class="{ 'drag-and-drop__item--dragging': dragging }"
+	            x-on:dragstart.self="
+	                dragging = true;
+	                event.dataTransfer.effectAllowed='move';
+	                event.dataTransfer.setData('text/plain', event.target.id);
+	            "
+	            x-on:dragend="dragging = false"
+	            x-data="{ dragging: false }"
+	            draggable="true">
+	            	New Space
+
+	            	<a href="#" class="btn">Save</a>
+	            	<a href="#" class="btn">Cancel</a>
+						</article>
+
 						<article 
 	            id="item-14"
 	            class="card drag-and-drop__item"
