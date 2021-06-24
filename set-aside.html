@@ -24,9 +24,29 @@
 
 			<div class="inboxes">
 				<div class="drag-and-drop" x-data="{ adding: false, removing: false }">
-				<section id="postings" class="cards push--top">
-					<article class="card">
-						Card
+				<section id="postings drag-and-drop__items" class="cards push--top" :class="{ 'drag-and-drop__items--adding': adding }"
+				            x-on:drop="adding = false"
+				            x-on:drop.prevent="
+				                const target = event.target.closest('div');
+				                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
+				                target.appendChild(element);
+				            "
+				            x-on:dragover.prevent="adding = true"
+				            x-on:dragleave.prevent="adding = false">
+					<article 
+						class="card" 
+            id="item-14"
+            class="card drag-and-drop__item"
+            :class="{ 'drag-and-drop__item--dragging': dragging }"
+            x-on:dragstart.self="
+                dragging = true;
+                event.dataTransfer.effectAllowed='move';
+                event.dataTransfer.setData('text/plain', event.target.id);
+            "
+            x-on:dragend="dragging = false"
+            x-data="{ dragging: false }"
+            draggable="true">
+            	Item 14 - Card
 					</article>
 
 					<article class="card space">
