@@ -241,3 +241,25 @@ h1, .hdg--xx-large {
 .btn--icon-new::before {
     background-image: url(https://production.haystack-assets.com/assets/icons/add-dcb4252….svg);
 }
+
+@media (min-width: 40em)
+.tray .posting {
+    width: 25rem;
+}
+
+.tray .posting {
+    font-size: 0.8em;
+    width: 18rem;
+    order: 1;
+    flex-shrink: 0;
+    margin: 0 0.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 0;
+    left: 3rem;
+    z-index: 0;
+    background: var(--color-bg--main);
+    box-shadow: 0 0 10px var(--color-bg--surface);
+}

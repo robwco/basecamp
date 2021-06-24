@@ -46,4 +46,19 @@
 
 .space .card {
   box-shadow: 0 0 3rem var(--color-shadow);
+  font-size: 0.8em;
+  width: 18rem;
+  order: 1;
+  flex-shrink: 0;
+  margin: 0 0.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 0;
+  left: 3rem;
+  z-index: 0;
+  background: var(--color-bg--main);
+  box-shadow: 0 0 10px var(--color-bg--surface);
+  width: 25rem;
 }
