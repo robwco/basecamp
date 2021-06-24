@@ -36,8 +36,26 @@
 						Card Content
 					</article>
 
-					<article class="card">
-						Card Content
+					<article class="card ">
+						
+
+						<div class="drag-and-drop__container drag-and-drop__container--to">
+				        <h3 class="drag-and-drop__title">⛺️ Basecamp Application</h3>
+				        <ul
+				            class="drag-and-drop__items"
+				            :class="{ 'drag-and-drop__items--adding': adding }"
+				            x-on:drop="adding = false"
+				            x-on:drop.prevent="
+				                const target = event.target.closest('ul');
+				                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
+				                target.appendChild(element);
+				            "
+				            x-on:dragover.prevent="adding = true"
+				            x-on:dragleave.prevent="adding = false">
+				            <!-- loop through the already selected items -->
+				        </ul>
+				    </div>
+
 					</article>
 
 					<ul
