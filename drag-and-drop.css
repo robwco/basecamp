@@ -50,4 +50,6 @@
 .drag-and-drop__item--dragging {
   color: #ccc !important;
   background-color: #fff !important;
+  font-size: 15px;
+  opacity: .75;
 }
