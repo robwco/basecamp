@@ -16,13 +16,16 @@
   overflow: hidden;
   border: 2px solid purple;
   min-height: 150px;
+  padding: 0 2rem;
 }
 
 .drag-and-drop__item {
+  box-shadow: 0 0 3rem var(--color-shadow); 
   background-color: pink;
 }
 .drag-and-drop__item:hover {
   background-color: lightblue;
+  cursor: pointer;
 }
 
 .drag-and-drop__items--adding {
