@@ -59,14 +59,14 @@
             :class="{ 'drag-and-drop__items--removing': removing }"
             x-on:drop="removing = false"
             x-on:drop.prevent="
-                const target = event.target.closest('ul');
+                const target = event.target.closest('div');
                 const element = document.getElementById(event.dataTransfer.getData('text/plain'));
                 target.appendChild(element);
             "
             x-on:dragover.prevent="removing = true"
             x-on:dragleave.prevent="removing = false">
             <!-- loop through the items -->
-            <li
+            <div
                 id="item-1"
                 class="card drag-and-drop__item"
                 :class="{ 'drag-and-drop__item--dragging': dragging }"
@@ -79,7 +79,7 @@
                 x-data="{ dragging: false }"
                 draggable="true">
                 <h1>Test Project</h1>
-            </li>
+            </div>
           </ul>
 				</section>
 			</div>
@@ -100,20 +100,6 @@
 		            x-on:dragover.prevent="removing = true"
 		            x-on:dragleave.prevent="removing = false">
 		            <!-- loop through the items -->
-		            <li
-		                id="item-1"
-		                class="drag-and-drop__item"
-		                :class="{ 'drag-and-drop__item--dragging': dragging }"
-		                x-on:dragstart.self="
-		                    dragging = true;
-		                    event.dataTransfer.effectAllowed='move';
-		                    event.dataTransfer.setData('text/plain', event.target.id);
-		                "
-		                x-on:dragend="dragging = false"
-		                x-data="{ dragging: false }"
-		                draggable="true">
-		                <h1>Test Project</h1>
-		            </li>
 		            <li
 		                id="item-2"
 		                class="drag-and-drop__item"
