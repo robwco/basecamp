@@ -1,15 +1,9 @@
 .drag-and-drop {
-  display: flex;
-  max-width: 760px;
-  padding: 20px;
-  margin: 0 auto;
+
 }
 .drag-and-drop__container {
   position: relative;
   overflow: hidden;
-  width: 50%;
-  border: 1px solid #ccc;
-  border-radius: 10px;
 }
 .drag-and-drop__divider {
   padding: 10px;
