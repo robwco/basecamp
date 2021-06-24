@@ -28,8 +28,6 @@
 
 			<div class="inboxes">
 				<div class="drag-and-drop" x-data="{ adding: false, removing: false }">
-
-
 					<section id="postings drag-and-drop__items" class="cards push--top">
 						<article 
 	            id="item-14"
@@ -80,21 +78,15 @@
 		            x-on:dragleave.prevent="adding = false"
 								x-on:dragover.prevent="removing = true"
             		x-on:dragleave.prevent="removing = false"
-
-
-
-		             class="drag-and-drop__items"
-            :class="{ 'drag-and-drop__items--removing': removing }"
-            x-on:drop="removing = false"
-            x-on:drop.prevent="
+		            class="drag-and-drop__items"
+            		:class="{ 'drag-and-drop__items--removing': removing }"
+            		x-on:drop="removing = false"
+            		x-on:drop.prevent="
                 const id = event.dataTransfer.getData('text/plain');
                 const target = event.target.closest('ul');
                 const element = document.getElementById(id);
                 target.appendChild(element);
-            "
-
-
-            >
+            		">
 									<div
 			                id="item-13"
 			                class="card drag-and-drop__item"
