@@ -242,7 +242,16 @@ h1, .hdg--xx-large {
 ) brightness(96%) contrast(106%);
 }
 
-
 .btn--icon-new::before {
     background-image: url(https://production.haystack-assets.com/assets/icons/add-dcb4252….svg);
+}
+
+.push_quarter--top {
+    margin-top: var(--quarter-space) !important;
+}
+.push_half--bottom {
+    margin-bottom: var(--half-space) !important;
+}
+.txt--break-words {
+    word-wrap: break-word;
 }
