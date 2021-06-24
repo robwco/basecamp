@@ -221,3 +221,14 @@ h1, .hdg--xx-large {
     color: var(--color-txt);
     border: 1px solid var(--color-border--solid);
 }
+
+.btn--outlined-tertiary.btn--icon::before, .btn--icon-round-outlined-tertiary::before {
+    filter: invert(15%) sepia(88%) saturate(6807%) hue-rotate(
+257deg
+) brightness(96%) contrast(106%);
+}
+
+
+.btn--icon-new::before {
+    background-image: url(https://production.haystack-assets.com/assets/icons/add-dcb4252….svg);
+}
