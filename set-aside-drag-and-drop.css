@@ -28,7 +28,7 @@
   cursor: pointer;
 }
 
-.drag-and-drop__items--adding {
+.drag-and-drop__items--adding:hover {
   background-color: #9ae6b4;
   border:  2px dashed green;
   color: red;
