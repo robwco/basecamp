@@ -15,6 +15,7 @@
   position: relative;
   overflow: hidden;
   border: 2px solid purple;
+  min-height: 150px;
 }
 .drag-and-drop__items--adding {
   background-color: #9ae6b4;
