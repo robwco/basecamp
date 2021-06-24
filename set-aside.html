@@ -24,98 +24,40 @@
 
 			<div class="inboxes">
 				<div class="drag-and-drop" x-data="{ adding: false, removing: false }">
-				<section id="postings drag-and-drop__items" class="cards push--top" :class="{ 'drag-and-drop__items--adding': adding }"
-				            x-on:drop="adding = false"
-				            x-on:drop.prevent="
-				                const target = event.target.closest('div');
-				                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
-				                target.appendChild(element);
-				            "
-				            x-on:dragover.prevent="adding = true"
-				            x-on:dragleave.prevent="adding = false">
-					<article 
-						class="card" 
-            id="item-14"
-            class="card drag-and-drop__item"
-            :class="{ 'drag-and-drop__item--dragging': dragging }"
-            x-on:dragstart.self="
-                dragging = true;
-                event.dataTransfer.effectAllowed='move';
-                event.dataTransfer.setData('text/plain', event.target.id);
-            "
-            x-on:dragend="dragging = false"
-            x-data="{ dragging: false }"
-            draggable="true">
-            	Item 14 - Card
-					</article>
+					<section id="postings drag-and-drop__items" class="cards push--top">
+						<article 
+							class="card" 
+	            id="item-14"
+	            class="card drag-and-drop__item"
+	            :class="{ 'drag-and-drop__item--dragging': dragging }"
+	            x-on:dragstart.self="
+	                dragging = true;
+	                event.dataTransfer.effectAllowed='move';
+	                event.dataTransfer.setData('text/plain', event.target.id);
+	            "
+	            x-on:dragend="dragging = false"
+	            x-data="{ dragging: false }"
+	            draggable="true">
+	            	Item 14 - Card
+						</article>
 
-					<article class="card space">
-						Space
-					</article>
+						<article class="card space">
+					    <h3 class="drag-and-drop__title">Space</h3>
 
-					<article class="card space">
-				    <h3 class="drag-and-drop__title">Space</h3>
+							<div
+								class="drag-and-drop__items"
+					            :class="{ 'drag-and-drop__items--adding': adding }"
+					            x-on:drop="adding = false"
+					            x-on:drop.prevent="
+					                const target = event.target.closest('div');
+					                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
+					                target.appendChild(element);
+					            "
+					            x-on:dragover.prevent="adding = true"
+					            x-on:dragleave.prevent="adding = false">
 
-						<div
-							class="drag-and-drop__items"
-				            :class="{ 'drag-and-drop__items--adding': adding }"
-				            x-on:drop="adding = false"
-				            x-on:drop.prevent="
-				                const target = event.target.closest('div');
-				                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
-				                target.appendChild(element);
-				            "
-				            x-on:dragover.prevent="adding = true"
-				            x-on:dragleave.prevent="adding = false">
-
-								<div
-		                id="item-13"
-		                class="card drag-and-drop__item"
-		                :class="{ 'drag-and-drop__item--dragging': dragging }"
-		                x-on:dragstart.self="
-		                    dragging = true;
-		                    event.dataTransfer.effectAllowed='move';
-		                    event.dataTransfer.setData('text/plain', event.target.id);
-		                "
-		                x-on:dragend="dragging = false"
-		                x-data="{ dragging: false }"
-		                draggable="true">
-		                Item 13
-		            </div>
-						</div>
-					</article>
-
-					<article class="card space drag-and-drop__container drag-and-drop__container--to">
-				        <h3 class="drag-and-drop__title">⛺️ Basecamp Application</h3>
-				        <div
-				            class="drag-and-drop__items"
-				            :class="{ 'drag-and-drop__items--adding': adding }"
-				            x-on:drop="adding = false"
-				            x-on:drop.prevent="
-				                const target = event.target.closest('div');
-				                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
-				                target.appendChild(element);
-				            "
-				            x-on:dragover.prevent="adding = true"
-				            x-on:dragleave.prevent="adding = false">
-				            
-										<div
-				                id="item-1"
-				                class="card drag-and-drop__item"
-				                :class="{ 'drag-and-drop__item--dragging': dragging }"
-				                x-on:dragstart.self="
-				                    dragging = true;
-				                    event.dataTransfer.effectAllowed='move';
-				                    event.dataTransfer.setData('text/plain', event.target.id);
-				                "
-				                x-on:dragend="dragging = false"
-				                x-data="{ dragging: false }"
-				                draggable="true">
-				                Item 1
-				            </div>
-
-                    <div
-			                id="item-12"
+									<div
+			                id="item-13"
 			                class="card drag-and-drop__item"
 			                :class="{ 'drag-and-drop__item--dragging': dragging }"
 			                x-on:dragstart.self="
@@ -126,28 +68,74 @@
 			                x-on:dragend="dragging = false"
 			                x-data="{ dragging: false }"
 			                draggable="true">
-			                Item 12
-			            	</div>
-				        </div>
-					</article>
+			                Item 13
+			            </div>
+							</div>
+						</article>
 
-					<ul
-            class="drag-and-drop__items"
-            :class="{ 'drag-and-drop__items--removing': removing }"
-            x-on:drop="removing = false"
-            x-on:drop.prevent="
-                const target = event.target.closest('div');
-                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
-                target.appendChild(element);
-            "
-            x-on:dragover.prevent="removing = true"
-            x-on:dragleave.prevent="removing = false">
-            <!-- loop through the items -->
+						<article class="card space drag-and-drop__container drag-and-drop__container--to">
+					        <h3 class="drag-and-drop__title">⛺️ Basecamp Application</h3>
+					        <div
+					            class="drag-and-drop__items"
+					            :class="{ 'drag-and-drop__items--adding': adding }"
+					            x-on:drop="adding = false"
+					            x-on:drop.prevent="
+					                const target = event.target.closest('div');
+					                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
+					                target.appendChild(element);
+					            "
+					            x-on:dragover.prevent="adding = true"
+					            x-on:dragleave.prevent="adding = false">
+					            
+											<div
+					                id="item-1"
+					                class="card drag-and-drop__item"
+					                :class="{ 'drag-and-drop__item--dragging': dragging }"
+					                x-on:dragstart.self="
+					                    dragging = true;
+					                    event.dataTransfer.effectAllowed='move';
+					                    event.dataTransfer.setData('text/plain', event.target.id);
+					                "
+					                x-on:dragend="dragging = false"
+					                x-data="{ dragging: false }"
+					                draggable="true">
+					                Item 1
+					            </div>
 
-          </ul>
-				</section>
+	                    <div
+				                id="item-12"
+				                class="card drag-and-drop__item"
+				                :class="{ 'drag-and-drop__item--dragging': dragging }"
+				                x-on:dragstart.self="
+				                    dragging = true;
+				                    event.dataTransfer.effectAllowed='move';
+				                    event.dataTransfer.setData('text/plain', event.target.id);
+				                "
+				                x-on:dragend="dragging = false"
+				                x-data="{ dragging: false }"
+				                draggable="true">
+				                Item 12
+				            	</div>
+					        </div>
+						</article>
+
+						<ul
+	            class="drag-and-drop__items"
+	            :class="{ 'drag-and-drop__items--removing': removing }"
+	            x-on:drop="removing = false"
+	            x-on:drop.prevent="
+	                const target = event.target.closest('div');
+	                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
+	                target.appendChild(element);
+	            "
+	            x-on:dragover.prevent="removing = true"
+	            x-on:dragleave.prevent="removing = false">
+	            <!-- loop through the items -->
+
+	          </ul>
+					</section>
+				</div>
 			</div>
-		</div>
 
 
 		    <div class="drag-and-drop__container drag-and-drop__container--from">
