@@ -154,3 +154,22 @@ h1, .hdg--xx-large {
     text-align: center;
 }
 
+
+.cards {
+    grid-auto-rows: 35rem;
+    grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+}
+.cards {
+    display: grid;
+    grid-gap: 1em;
+    grid-auto-rows: 20rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+.card {
+    background: var(--color-bg--card);
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 3rem var(--color-shadow);
+}
