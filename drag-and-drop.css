@@ -48,8 +48,8 @@
   background-color: #eee;
 }
 .drag-and-drop__item--dragging {
-  color: #ccc !important;
-  background-color: #fff !important;
+  color: #000 !important;
+  background-color: #EFEFEF !important;
   opacity: .20;
   border: 2px dashed #B2B2B2;
 }
