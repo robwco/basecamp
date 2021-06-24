@@ -27,6 +27,7 @@
 
 .drag-and-drop__items--adding {
   background-color: #9ae6b4;
+  border:  2px dashed green;
   color: red;
 }
 .drag-and-drop__items--removing {
