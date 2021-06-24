@@ -51,6 +51,20 @@
 				            x-on:dragover.prevent="adding = true"
 				            x-on:dragleave.prevent="adding = false">
 				            <!-- loop through the already selected items -->
+										<div
+				                id="item-1"
+				                class="card drag-and-drop__item"
+				                :class="{ 'drag-and-drop__item--dragging': dragging }"
+				                x-on:dragstart.self="
+				                    dragging = true;
+				                    event.dataTransfer.effectAllowed='move';
+				                    event.dataTransfer.setData('text/plain', event.target.id);
+				                "
+				                x-on:dragend="dragging = false"
+				                x-data="{ dragging: false }"
+				                draggable="true">
+				                Item 1
+				            </div>
 				        </div>
 					</article>
 
@@ -67,7 +81,7 @@
             x-on:dragleave.prevent="removing = false">
             <!-- loop through the items -->
             <div
-                id="item-1"
+                id="item-12"
                 class="card drag-and-drop__item"
                 :class="{ 'drag-and-drop__item--dragging': dragging }"
                 x-on:dragstart.self="
@@ -78,7 +92,7 @@
                 x-on:dragend="dragging = false"
                 x-data="{ dragging: false }"
                 draggable="true">
-                <h1>Test Project</h1>
+                Item 12
             </div>
           </ul>
 				</section>
