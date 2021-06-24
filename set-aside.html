@@ -44,7 +44,7 @@
 				            :class="{ 'drag-and-drop__items--adding': adding }"
 				            x-on:drop="adding = false"
 				            x-on:drop.prevent="
-				                const target = event.target.closest('ul');
+				                const target = event.target.closest('div');
 				                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
 				                target.appendChild(element);
 				            "
