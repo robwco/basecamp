@@ -25,6 +25,19 @@
 			<div class="inboxes">
 				<div class="drag-and-drop" x-data="{ adding: false, removing: false }">
 					<section id="postings drag-and-drop__items" class="cards push--top">
+						<div								
+							class="drag-and-drop__items"
+	            :class="{ 'drag-and-drop__items--adding': adding }"
+	            x-on:drop="adding = false"
+	            x-on:drop.prevent="
+	                const target = event.target.closest('div');
+	                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
+	                target.appendChild(element);
+	            "
+	            x-on:dragover.prevent="adding = true"
+	            x-on:dragleave.prevent="adding = false">
+						</div>
+
 						<article 
 							class="card" 
 	            id="item-14"
@@ -46,15 +59,15 @@
 
 							<div
 								class="drag-and-drop__items"
-					            :class="{ 'drag-and-drop__items--adding': adding }"
-					            x-on:drop="adding = false"
-					            x-on:drop.prevent="
-					                const target = event.target.closest('div');
-					                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
-					                target.appendChild(element);
-					            "
-					            x-on:dragover.prevent="adding = true"
-					            x-on:dragleave.prevent="adding = false">
+		            :class="{ 'drag-and-drop__items--adding': adding }"
+		            x-on:drop="adding = false"
+		            x-on:drop.prevent="
+		                const target = event.target.closest('div');
+		                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
+		                target.appendChild(element);
+		            "
+		            x-on:dragover.prevent="adding = true"
+		            x-on:dragleave.prevent="adding = false">
 
 									<div
 			                id="item-13"
