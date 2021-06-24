@@ -136,6 +136,11 @@ body {
     margin: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
+.page__content {
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
 h1, .hdg--xx-large {
     font-size: var(--font-size-xx-large);
 }
@@ -145,7 +150,7 @@ h1, .hdg--xx-large {
     line-height: 1;
 }
 
-.page__content {
-    max-width: var(--content-width);
-    margin: 0 auto;
+.align--center\@desktop {
+    text-align: center;
 }
+
