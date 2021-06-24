@@ -118,21 +118,6 @@
 				            	</div>
 					        </div>
 						</article>
-
-						<ul
-	            class="drag-and-drop__items"
-	            :class="{ 'drag-and-drop__items--removing': removing }"
-	            x-on:drop="removing = false"
-	            x-on:drop.prevent="
-	                const target = event.target.closest('div');
-	                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
-	                target.appendChild(element);
-	            "
-	            x-on:dragover.prevent="removing = true"
-	            x-on:dragleave.prevent="removing = false">
-	            <!-- loop through the items -->
-
-	          </ul>
 					</section>
 				</div>
 			</div>
