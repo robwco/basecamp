@@ -39,3 +39,7 @@
   opacity: .20;
   border: 2px dashed #B2B2B2;
 }
+
+.space .card {
+  box-shadow: 0 0 3rem var(--color-shadow);
+}
