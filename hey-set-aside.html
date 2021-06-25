@@ -24,7 +24,7 @@
 			  </p>
 
 			  <div style="right:0; top: 0; position: absolute;" x-data="{id: 1}">
-					<button class="btn btn--icon btn--icon-new" @click="$dispatch('open-new-space',{id})">
+					<button class="btn btn--icon btn--icon-new" @click="$dispatch('open-new-pile',{id})">
 						Pile</button>
 				</div>
 			</header>
@@ -34,11 +34,11 @@
 					class="card u-relative"
 					x-data="{ open: false }"
 			    x-show.transition.origin.top.left="open"
-			    @open-new-space.window="if ($event.detail.id == 1) open = true" style="box-sizing: border-box;">
+			    @open-new-pile.window="if ($event.detail.id == 1) open = true" style="box-sizing: border-box;">
 					<div class="card__content">
 						<div class="card__header align--center@desktop">
 							<h2 class="card__title flush" contenteditable="true">
-								<span style="background-color: #CCBDFE;">New Space</span>
+								<span style="background-color: #CCBDFE;">New Pile</span>
 							</h2>
 						</div>
 					</div>
@@ -73,52 +73,57 @@
 				          <time>Jun 21</time>
 				        </div>
 							</div>
-
-
-
 						</div>
-						
+
+						<div class="">
+							<p>Wonderful, thanks!</p>
+							<p>Happy Father's Day to you as well.</p>
+							<p>-Jason</p>
+							<p>On June 21, 2021, Robert Williams robert.williams@hey.com wrote: You are my friend you are special.</p>
+						</div>
 					</div>
 				</article>
 
 				<article
-					class="card card__space u-relative">
+					class="card card__pile u-relative">
 					<div class="card__content">
 						<div class="card__header">
 							<h2 class="card__title flush align--center@desktop">
 								⛺️ Basecamp Application
 							</h2>
+						</div>
 
-							<div class="card__space__tray"
+						<div class="card__pile__tray">
+							<div class="card" 
 								draggable="true">
-
-								<div class="card">
-									<div class="flex flex--align-center">
-						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
-						        	<div class="card__avatar-placeholder">
-						        		JF
-						        	</div>
-										</div>
-
-						        <div class="card__meta txt--small txt--ellipsis">
-						          <span class="card__sender">
-						            Jason Fried
-						          </span>
-
-						          <time>Jun 21</time>
-						        </div>
+								<div class="flex flex--align-center">
+					        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+					        	<div class="card__avatar-placeholder">
+					        		JF
+					        	</div>
 									</div>
+
+					        <div class="card__meta txt--small txt--ellipsis">
+					          <span class="card__sender">
+					            Jason Fried
+					          </span>
+
+					          <span class="card__note">
+					          	Call 888-555-3737
+					          </span>
+
+					          <time>Jun 21</time>
+					        </div>
 								</div>
 							</div>
 
-							<div class="card__space__tray__slot--empty"></div>
-
+							<div class="card__pile__tray__slot--empty"></div>
 						</div>
 					</div>
 				</article>
 
 				<article
-					class="card card__space u-relative">
+					class="card card__pile u-relative">
 					<div class="card__content">
 						<div class="card__header">
 							<h2 class="card__title flush align--center@desktop">
@@ -126,7 +131,7 @@
 							</h2>
 						</div>
 
-						<div class="card__space__tray__slot--empty"></div>
+						<div class="card__pile__tray__slot--empty"></div>
 					</div>
 				</article>
 

@@ -132,11 +132,11 @@ button svg { width: 20px; margin:  0; }
 
 /* New Components */
 
-.card__space {
+.card__pile {
     
 }
 
-.card__space__tray {
+.card__pile__tray {
     margin-top: 25px;
     
 }
@@ -145,11 +145,11 @@ button svg { width: 20px; margin:  0; }
     
 }
 
-.card__space.card--hovered-over {
+.card__pile.card--hovered-over {
     box-shadow: 0 0 30px rgba(226, 221, 215,.7),0 10px 40px rgba(226, 221, 215);
 } 
 
-.card__space__tray .card {
+.card__pile__tray .card {
     padding:  1rem;
     box-shadow: 0 0 10px rgba(226, 221, 215,.4),0 10px 20px rgba(226, 221, 215);
 }
@@ -171,7 +171,7 @@ button svg { width: 20px; margin:  0; }
     background: #5622FA;
 }
 
-.card__space__tray__slot--empty {
+.card__pile__tray__slot--empty {
     margin-top: 10px;
     background: white;
     width: 100%;
@@ -181,13 +181,20 @@ button svg { width: 20px; margin:  0; }
     border: 2px dashed rgba(0,0,0,0);
 }
 
-.card__space.card--hovered-over .card__space__tray__slot--empty {
+.card__pile.card--hovered-over .card__pile__tray__slot--empty {
     background: #F9F9F9; 
     border: 2px dashed rgba(0,0,0,.1);
 }
 
 
-
+.card__note {
+    background: linear-gradient(90.16deg, #E1EAFA 0.12%, #F4F7FD 99.87%);
+    border-radius: 0px 10px 10px 10px;
+    font-size: 15px;
+    color: #6D6A78;
+    padding: .1rem .15rem .15rem .75rem;
+    margin-right: .15rem;
+}
 
 
 
@@ -212,7 +219,7 @@ button svg { width: 20px; margin:  0; }
     margin-right: 10px;
 }
 
-.card__space .card__avatar-placeholder { 
+.card__pile .card__avatar-placeholder { 
     width:35px; 
     height:35px; 
     border-radius:35px;
