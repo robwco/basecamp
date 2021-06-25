@@ -2,9 +2,7 @@
 
 :root {
     --content-width: 98rem;
-    --rgb-medium-gray: 226, 221, 215;
     --color-bg--card: #fff;
-    --color-shadow: rgba(var(--rgb-medium-gray), 0.5);
     --font-size-base: 11px;
     --font-size-medium: 1.8rem;
     --font-size-xx-large: 3.4rem;
@@ -54,11 +52,11 @@ h2 {
 }
 
 .card {
-    background: var(--color-bg--card);
+    background: #FFF;
     border-radius: 1rem;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 3rem var(--color-shadow);
+    box-shadow: 0 0 3rem rgba(226, 221, 215, 0.5);
 }
 
 /* New Components */
