@@ -255,3 +255,7 @@ h1, .hdg--xx-large {
 .txt--break-words {
     word-wrap: break-word;
 }
+
+.card__content {
+    padding: 1.5em;
+    width: 100%;

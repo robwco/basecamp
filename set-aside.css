@@ -1,0 +1,10 @@
+.u-relative {
+    position: relative;
+}
+
+.cards {
+    display: grid;
+    grid-gap: 1em;
+    grid-auto-rows: 20rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
