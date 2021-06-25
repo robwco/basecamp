@@ -78,6 +78,10 @@ h2 {
     max-width: 100%;
 }
 
+.card__pile .card__content {
+    padding: 0;
+}
+
 .flush {
     margin: 0 !important;
 }
@@ -127,22 +131,41 @@ h2 {
     filter: invert(15%) sepia(88%) saturate(6807%) hue-rotate(257deg) brightness(96%) contrast(106%);
 }
 
-
 button svg { width: 20px; margin:  0; }
 
+.txt--ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;   
+}
+
 /* New Components */
+.draggable-container--invisible > .card {
+}
+
+.draggable-container.draggable-container--invisible {
+    background: #FFF;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+}
+
 
 .card__pile {
     
 }
 
 h2.card__pile__title {
+    font-size: 18px;
+    background: #FFF;
+    border-bottom: 1px solid #5722FA;
+    padding: 1.5rem 1.5rem;
     margin-bottom: 25px !important;
 }
 
 .card__pile h2.card__title, .card__pile .card__message {
     display: none;
-
 }
 
 .card__pile__tray {
@@ -154,7 +177,7 @@ h2.card__pile__title {
     
 }
 
-.card__pile.card--hovered-over {
+.card__pile < .card.dragging {
     box-shadow: 0 0 30px rgba(226, 221, 215,.7),0 10px 40px rgba(226, 221, 215);
 } 
 
@@ -167,12 +190,35 @@ h2.card__pile__title {
     padding: 0 !important;
 }
 
+.card__pile .card {
+    margin: 0 1.5em;
+}
+
+
 .card__actions {
     position: absolute;
     bottom:0;
     width:100%;
     padding: 1.5em;
     box-sizing: border-box;
+    background: white;
+}
+
+.card__actions--see-more {
+    box-shadow: 0 -5px 5px rgba(240,240,240,.5);
+    padding: .5em;
+    width: 100%;
+    text-align: center;
+}
+
+.card__actions--see-more .btn {
+    border: 1px solid #DEDDE0;
+    width: auto !important;
+    display: inline-block !important;
+    margin:  0 auto;
+    color: #6E6A79;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .card__actions .btn {
@@ -189,7 +235,7 @@ h2.card__pile__title {
     border-radius: 0px 10px 10px 10px;
     font-size: 15px;
     color: #6D6A78;
-    padding: .1rem .15rem .15rem .75rem;
+    padding: .1rem .75rem .15rem .75rem;
     margin-right: .15rem;
 }
 
@@ -202,6 +248,16 @@ h2.card__pile__title {
 
 .draggable {
     
+}
+
+.draggable.dragging {
+    opacity: .5;
+    border:  2px dashed #CCC;
+}
+
+.card__pile .draggable.dragging {
+    border:  0;
+    opacity: 1  ;
 }
 
 .draggable-container .card+.card {
@@ -230,11 +286,22 @@ h2.card__pile__title {
     width:35px; 
     height:35px; 
     border-radius:35px;
+    font-size: 15px;
 }
 
-.card__avatar-placeholder:first-child {
+.card__avatar-placeholder#avatar-12 {
+    background: #EF4444;
+}
+
+.card__avatar-placeholder#avatar-1 {
+    background: #02B8C9;
+}
+
+.card__avatar-placeholder#avatar-2 {
     background: #5622FA;
 }
+
+
 
 .card__meta {
     line-height: 1.2;
@@ -244,6 +311,11 @@ h2.card__pile__title {
     display: block;
     font-size: 18px;
     font-weight: 500;
+}
+
+.card__pile .card__meta .card__sender {
+    font-size: 16.5px;
+    font-weight: 400;
 }
 
 .card__meta time {
