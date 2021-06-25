@@ -1,5 +1,14 @@
+:root {
+    --content-width: 98rem;
+}
+
 .u-relative {
     position: relative;
+}
+
+.page__content {
+    max-width: var(--content-width);
+    margin: 0 auto;
 }
 
 .cards {
