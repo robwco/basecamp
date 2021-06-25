@@ -21,8 +21,9 @@ body {
     font-size: var(--font-size-medium);
 }
 
-h1, .hdg--xx-large {
-    font-size: var(--font-size-xx-large);
+h1 {
+    font-size: 44px;
+    line-height: 44px;
 }
 
 .u-relative {
