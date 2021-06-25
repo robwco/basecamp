@@ -6,6 +6,8 @@
     --font-size-base: 11px;
     --font-size-medium: 1.8rem;
     --font-size-xx-large: 3.4rem;
+
+
 }
 
 html {
@@ -20,6 +22,7 @@ body {
     font-size: var(--font-size-medium);
 }
 
+
 h1 {
     font-size: 44px;
     line-height: 44px;
@@ -27,10 +30,21 @@ h1 {
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 28px;
-    font-weight: 400;
+    font-weight: 700;
 }
+
+.flex {
+    display: flex;
+}
+
+.flex--align-center {
+    display: flex;
+    align-items: center;
+}
+
+
 .u-relative {
     position: relative;
 }
@@ -61,11 +75,166 @@ h2 {
 
 .card__content {
     padding: 1.5em;
-    width: 100%;
+    max-width: 100%;
 }
 
 .flush {
     margin: 0 !important;
 }
 
+.btn {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    display: inline-block;
+    margin: 0;
+    padding: 0.3em 0.8em;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 3rem;
+    white-space: nowrap;
+    background-color: transparent;
+    color: #5622FA;
+    border: 1px solid #5622FA;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.btn + .btn {
+    margin-bottom: 0;
+}
+
+.btn--icon {
+    padding-left: 2.2em;
+    position: relative;
+}
+
+.btn--icon::before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    left: 0.75em;
+    top: 50%;
+    margin-top: -0.5em;
+    background: center / 1em no-repeat;
+}
+
+.btn--icon-new::before {
+    background-image: url(https://production.haystack-assets.com/assets/icons/add-dcb425261714d30d78d922577277ff159fef13fca9c5c726ba82a1dda5e2b51e.svg);
+}
+
+.btn.btn--icon::before {
+    filter: invert(15%) sepia(88%) saturate(6807%) hue-rotate(257deg) brightness(96%) contrast(106%);
+}
+
+
+button svg { width: 20px; margin:  0; }
+
 /* New Components */
+
+.card__space {
+    
+}
+
+.card__space__tray {
+    margin-top: 25px;
+    
+}
+
+.card.card--hovered-over {
+    
+}
+
+.card__space.card--hovered-over {
+    box-shadow: 0 0 30px rgba(226, 221, 215,.7),0 10px 40px rgba(226, 221, 215);
+} 
+
+.card__space__tray .card {
+    padding:  1rem;
+    box-shadow: 0 0 10px rgba(226, 221, 215,.4),0 10px 20px rgba(226, 221, 215);
+}
+
+.card__actions {
+    position: absolute;
+    bottom:0;
+    width:100%;
+    padding: 1.5em;
+    box-sizing: border-box;
+}
+
+.card__actions .btn {
+    display: block; width:100%; 
+}
+
+.card__actions .btn--save {
+    color:#FFF; 
+    background: #5622FA;
+}
+
+.card__space__tray__slot--empty {
+    margin-top: 10px;
+    background: white;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    border: 2px dashed rgba(0,0,0,0);
+}
+
+.card__space.card--hovered-over .card__space__tray__slot--empty {
+    background: #F9F9F9; 
+    border: 2px dashed rgba(0,0,0,.1);
+}
+
+
+
+
+
+
+
+
+/* For Demo Purposes Only */
+
+.card__title {
+    margin:  0 0 10px;
+}
+
+.card__avatar-placeholder { 
+    background: #000;
+    width:45px; 
+    height:45px; 
+    border-radius:45px;
+    color:white; 
+    font-weight:bold;  
+    display:inline-flex; 
+    align-items:center; 
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.card__space .card__avatar-placeholder { 
+    width:35px; 
+    height:35px; 
+    border-radius:35px;
+}
+
+.card__avatar-placeholder:first-child {
+    background: #5622FA;
+}
+
+
+
+.card__meta {
+    line-height: 1.2;
+}
+
+.card__meta .card__sender {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card__meta time {
+    font-size: 15px;
+    color: #6E6A79;
+}

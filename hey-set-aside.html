@@ -2,42 +2,190 @@
 <html>
 <head>
 	<title>HEY - Set Aside Redesign Protoype</title>
+	<link rel="stylesheet" type="text/css" href="./set-aside.css" />
 	<link rel="stylesheet" type="text/css" href="/basecamp/set-aside.css" />
 	<!--<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<link rel="stylesheet" type="text/css" href="/basecamp/property-of-basecamp.css" />
-	<link rel="stylesheet" type="text/css" href="/basecamp/set-aside-drag-and-drop.css" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+	<link rel="stylesheet" type="text/css" href="/basecamp/set-aside-drag-and-drop.css" />-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
 	<main id="main-content">
 		<div class="page__content">
-			<header class="align--center@desktop u-relative">
+			<header class="align--center@desktop u-relative"  style="margin-top:50px;">
 			  <h1 class="flush">
 			  	Set Aside
 			  </h1>
 
-			  <p class="flush">
+			  <p style="margin-top:5px; margin-bottom: 0;">
 			  	Everything you’ve marked as Set Aside.
 			  </p>
 
-					<a title="Create a New Space" class="btn btn--outlined-tertiary btn--icon btn--icon-new u-show@desktop" aria-label="Create a New Space" href="#">New Space</a>
+			  <div style="right:0; top: 0; position: absolute;" x-data="{id: 1}">
+					<button class="btn btn--icon btn--icon-new" @click="$dispatch('open-new-space',{id})">
+						Pile</button>
+				</div>
 			</header>
 
-			<section class="cards push--top">
-				<article class="card">
+			<section class="cards push--top u-relative" style="margin-top:50px; box-sizing: border-box;">
+				<article
+					class="card u-relative"
+					x-data="{ open: false }"
+			    x-show.transition.origin.top.left="open"
+			    @open-new-space.window="if ($event.detail.id == 1) open = true" style="box-sizing: border-box;">
 					<div class="card__content">
-						<div class="card__header">
-							<h2 class="card__title flush">
-								Applying to Basecamp
+						<div class="card__header align--center@desktop">
+							<h2 class="card__title flush" contenteditable="true">
+								<span style="background-color: #CCBDFE;">New Space</span>
 							</h2>
 						</div>
 					</div>
+					
+					<div class="card__actions">
+						<button class="btn btn--save">Save</button>
+						<button class="btn">Cancel</button>
+					</div>
 				</article>
+
+				<article
+					class="card u-relative" 
+					draggable="true" >
+					<div class="card__content">
+						<div class="card__header">
+							<h2 class="card__title">
+								Applying to Basecamp
+							</h2>
+
+							<div class="flex flex--align-center">
+				        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+				        	<div class="card__avatar-placeholder">
+				        		JF
+				        	</div>
+								</div>
+
+				        <div class="card__meta txt--small txt--ellipsis">
+				          <span class="card__sender">
+				            Jason Fried
+				          </span>
+
+				          <time>Jun 21</time>
+				        </div>
+							</div>
+
+
+
+						</div>
+						
+					</div>
+				</article>
+
+				<article
+					class="card card__space u-relative">
+					<div class="card__content">
+						<div class="card__header">
+							<h2 class="card__title flush align--center@desktop">
+								⛺️ Basecamp Application
+							</h2>
+
+							<div class="card__space__tray"
+								draggable="true">
+
+								<div class="card">
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder">
+						        		JF
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Jason Fried
+						          </span>
+
+						          <time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card__space__tray__slot--empty"></div>
+
+						</div>
+					</div>
+				</article>
+
+				<article
+					class="card card__space u-relative">
+					<div class="card__content">
+						<div class="card__header">
+							<h2 class="card__title flush align--center@desktop">
+								🚨 Reservations for Friday
+							</h2>
+						</div>
+
+						<div class="card__space__tray__slot--empty"></div>
+					</div>
+				</article>
+
 			</section>
 		</div>
 	</main>
+
+	<script>
+		function handleDragStart(e) {
+    this.style.opacity = '0.2';
+    this.style.border = '3px dashed #B2B2B2';
+		  dragSrcEl = this;
+	  	e.dataTransfer.effectAllowed = 'move';
+	  	e.dataTransfer.setData('text/html', this.innerHTML);
+	  }
+
+		function handleDrop(e) {
+		  e.stopPropagation();
+
+		  if (dragSrcEl !== this) {
+		    dragSrcEl.innerHTML = this.innerHTML;
+		    this.innerHTML = e.dataTransfer.getData('text/html');
+		  }
+
+		  return false;
+		}
+	  function handleDragEnd(e) {
+	    this.style.opacity = '1';
+    	this.style.border = '0';
+	    items.forEach(function (item) {
+      	item.classList.remove('card--hovered-over');
+    	});
+	  }
+
+	  function handleDragOver(e) {
+    if (e.preventDefault) {
+      e.preventDefault();
+    }
+
+	    return false;
+	  }
+
+	  function handleDragEnter(e) {
+	    this.classList.add('card--hovered-over');
+	  }
+
+	  function handleDragLeave(e) {
+	    this.classList.remove('card--hovered-over');
+	  }
+
+	  let items = document.querySelectorAll('.cards .card');
+	  items.forEach(function(item) {
+	    item.addEventListener('dragstart', handleDragStart, false);
+	    item.addEventListener('dragend', handleDragEnd, false);
+	    item.addEventListener('dragenter', handleDragEnter, false);
+    	item.addEventListener('dragleave', handleDragLeave, false);
+    	item.addEventListener('dragend', handleDragEnd, false);
+	  });
+	</script>
 </body>
 </html>
 
