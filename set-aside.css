@@ -1,5 +1,7 @@
 :root {
     --content-width: 98rem;
+    --color-bg--card: #fff;
+    --color-shadow: rgba(var(--rgb-medium-gray), 0.5);
 }
 
 html, body {
@@ -8,6 +10,10 @@ html, body {
 
 .u-relative {
     position: relative;
+}
+
+.align--center\@desktop {
+    text-align: center;
 }
 
 .page__content {
@@ -20,4 +26,12 @@ html, body {
     grid-gap: 1em;
     grid-auto-rows: 20rem;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+.card {
+    background: var(--color-bg--card);
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 3rem var(--color-shadow);
 }
