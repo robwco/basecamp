@@ -1,11 +1,23 @@
+/* Pulled from Basecamp */
+
 :root {
     --content-width: 98rem;
     --color-bg--card: #fff;
     --color-shadow: rgba(var(--rgb-medium-gray), 0.5);
+    --font-size-base: 11px;
+    --font-size-medium: 1.8rem;
 }
 
-html, body {
+html {
+    font-size: var(--font-size-base);
+    line-height: 1.4;
+    -webkit-text-size-adjust: 100%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: var(--font-size-medium);
 }
 
 .u-relative {
@@ -35,3 +47,5 @@ html, body {
     overflow: hidden;
     box-shadow: 0 0 3rem var(--color-shadow);
 }
+
+/* New Components */
