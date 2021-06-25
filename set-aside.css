@@ -64,4 +64,8 @@ h2 {
     width: 100%;
 }
 
+.flush {
+    margin: 0 !important;
+}
+
 /* New Components */
