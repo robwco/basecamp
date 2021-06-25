@@ -9,7 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="/basecamp/property-of-basecamp.css" />
 	<link rel="stylesheet" type="text/css" href="/basecamp/set-aside-drag-and-drop.css" />-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="https://cdn.jsdelivr.net/npm/jquery-sortablejs@latest/jquery-sortable.js"></script>
 </head>
 
 <body>
@@ -30,7 +29,7 @@
 				</div>
 			</header>
 
-			<section class="cards push--top u-relative" style="margin-top:50px; box-sizing: border-box;">
+			<section class="cards push--top u-relative" id="my-list" style="margin-top:50px; box-sizing: border-box;">
 				<article
 					class="card u-relative"
 					x-data="{ open: false }"
@@ -51,7 +50,7 @@
 				</article>
 
 				<article
-					class="card u-relative" 
+					class="card draggable u-relative" 
 					draggable="true" >
 					<div class="card__content">
 						<div class="card__header">
@@ -76,7 +75,7 @@
 							</div>
 						</div>
 
-						<div class="">
+						<div class="card__message">
 							<p>Wonderful, thanks!</p>
 							<p>Happy Father's Day to you as well.</p>
 							<p>-Jason</p>
@@ -87,110 +86,94 @@
 
 				<article
 					class="card card__pile u-relative">
-					<div class="card__content">
+					<div class="card__content  draggable-container ">
 						<div class="card__header">
-							<h2 class="card__title flush align--center@desktop">
+							<h2 class="card__pile__title flush align--center@desktop">
 								⛺️ Basecamp Application
 							</h2>
 						</div>
 
-						<div class="card__pile__tray">
-							<div class="card" 
-								draggable="true">
-								<div class="flex flex--align-center">
-					        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
-					        	<div class="card__avatar-placeholder">
-					        		JF
-					        	</div>
-									</div>
-
-					        <div class="card__meta txt--small txt--ellipsis">
-					          <span class="card__sender">
-					            Jason Fried
-					          </span>
-
-					          <span class="card__note">
-					          	Call 888-555-3737
-					          </span>
-
-					          <time>Jun 21</time>
-					        </div>
+						<div class="card draggable" 
+							draggable="true">
+							<div class="flex flex--align-center">
+				        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+				        	<div class="card__avatar-placeholder">
+				        		JF
+				        	</div>
 								</div>
-							</div>
 
-							<div class="card__pile__tray__slot--empty"></div>
+				        <div class="card__meta txt--small txt--ellipsis">
+				          <span class="card__sender">
+				            Jason Fried
+				          </span>
+
+				          <span class="card__note">
+				          	Call 888-555-3737
+				          </span>
+
+				          <time>Jun 21</time>
+				        </div>
+							</div>
 						</div>
+
 					</div>
 				</article>
 
 				<article
 					class="card card__pile u-relative">
-					<div class="card__content">
+					<div class="card__content draggable-container">
 						<div class="card__header">
-							<h2 class="card__title flush align--center@desktop">
+							<h2 class="card__pile__title flush align--center@desktop">
 								🚨 Reservations for Friday
 							</h2>
 						</div>
 
-						<div class="card__pile__tray__slot--empty"></div>
 					</div>
 				</article>
-
 			</section>
 		</div>
 	</main>
 
 	<script>
-		function handleDragStart(e) {
-    this.style.opacity = '0.2';
-    this.style.border = '3px dashed #B2B2B2';
-		  dragSrcEl = this;
-	  	e.dataTransfer.effectAllowed = 'move';
-	  	e.dataTransfer.setData('text/html', this.innerHTML);
-	  }
+		const draggables = document.querySelectorAll('.draggable')
+		const containers = document.querySelectorAll('.draggable-container')
 
-		function handleDrop(e) {
-		  e.stopPropagation();
+		draggables.forEach(draggable => {
+		  draggable.addEventListener('dragstart', () => {
+		    draggable.classList.add('dragging')
+		  })
 
-		  if (dragSrcEl !== this) {
-		    dragSrcEl.innerHTML = this.innerHTML;
-		    this.innerHTML = e.dataTransfer.getData('text/html');
-		  }
+		  draggable.addEventListener('dragend', () => {
+		    draggable.classList.remove('dragging')
+		  })
+		})
 
-		  return false;
+		containers.forEach(container => {
+		  container.addEventListener('dragover', e => {
+		    e.preventDefault()
+		    const afterElement = getDragAfterElement(container, e.clientY)
+		    const draggable = document.querySelector('.dragging')
+		    if (afterElement == null) {
+		      container.appendChild(draggable)
+		    } else {
+		      container.insertBefore(draggable, afterElement)
+		    }
+		  })
+		})
+
+		function getDragAfterElement(container, y) {
+		  const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')]
+
+		  return draggableElements.reduce((closest, child) => {
+		    const box = child.getBoundingClientRect()
+		    const offset = y - box.top - box.height / 2
+		    if (offset < 0 && offset > closest.offset) {
+		      return { offset: offset, element: child }
+		    } else {
+		      return closest
+		    }
+		  }, { offset: Number.NEGATIVE_INFINITY }).element
 		}
-	  function handleDragEnd(e) {
-	    this.style.opacity = '1';
-    	this.style.border = '0';
-	    items.forEach(function (item) {
-      	item.classList.remove('card--hovered-over');
-    	});
-	  }
-
-	  function handleDragOver(e) {
-    if (e.preventDefault) {
-      e.preventDefault();
-    }
-
-	    return false;
-	  }
-
-	  function handleDragEnter(e) {
-	    this.classList.add('card--hovered-over');
-	  }
-
-	  function handleDragLeave(e) {
-	    this.classList.remove('card--hovered-over');
-	  }
-
-	  let items = document.querySelectorAll('.cards .card');
-	  items.forEach(function(item) {
-	    item.addEventListener('dragstart', handleDragStart, false);
-	    item.addEventListener('dragend', handleDragEnd, false);
-	    item.addEventListener('dragenter', handleDragEnter, false);
-    	item.addEventListener('dragleave', handleDragLeave, false);
-    	item.addEventListener('dragend', handleDragEnd, false);
-	  });
 	</script>
 </body>
 </html>
@@ -337,3 +320,62 @@
 				</div>
 			</div>
 		</div>-->
+
+
+<!--
+
+
+	<script>
+		function handleDragStart(e) {
+    this.style.opacity = '0.2';
+    this.style.border = '3px dashed #B2B2B2';
+		  dragSrcEl = this;
+	  	e.dataTransfer.effectAllowed = 'move';
+	  	e.dataTransfer.setData('text/html', this.innerHTML);
+	  }
+
+		function handleDrop(e) {
+		  e.stopPropagation();
+
+		  if (dragSrcEl !== this) {
+		    dragSrcEl.innerHTML = this.innerHTML;
+		    this.innerHTML = e.dataTransfer.getData('text/html');
+		  }
+
+		  return false;
+		}
+	  function handleDragEnd(e) {
+	    this.style.opacity = '1';
+    	this.style.border = '0';
+	    items.forEach(function (item) {
+      	item.classList.remove('card--hovered-over');
+    	});
+	  }
+
+	  function handleDragOver(e) {
+    if (e.preventDefault) {
+      e.preventDefault();
+    }
+
+	    return false;
+	  }
+
+	  function handleDragEnter(e) {
+	    this.classList.add('card--hovered-over');
+	  }
+
+	  function handleDragLeave(e) {
+	    this.classList.remove('card--hovered-over');
+	  }
+
+	  let items = document.querySelectorAll('.cards .card');
+	  items.forEach(function(item) {
+	    item.addEventListener('dragstart', handleDragStart, false);
+	    item.addEventListener('dragend', handleDragEnd, false);
+	    item.addEventListener('dragenter', handleDragEnter, false);
+    	item.addEventListener('dragleave', handleDragLeave, false);
+    	item.addEventListener('dragend', handleDragEnd, false);
+	  });
+	</script>
+
+	-->
