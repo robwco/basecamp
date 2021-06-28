@@ -1,3 +1,137 @@
+/* New Components */
+.draggable-container.draggable-container--invisible {
+    background: #FFF;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+}
+
+h2.card__pile__title {
+    font-size: 20px;
+    background: #FFF;
+    padding: 3rem 1.5rem 1rem;
+    margin-bottom: 25px !important;
+    background: #FFF;
+    font-weight: 600;
+}
+
+h2.card__pile__title:focus {
+    outline: 0;
+}
+
+
+h2.card__pile__title a {
+    text-decoration: none;
+    color: #000;
+}
+
+.card__pile h2.card__title, .card__pile .card__message {
+    display: none;
+}
+
+.card__pile .card__pile__header {
+    position:  absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 90;
+}
+
+.card__pile  .card__pile__header + .card {
+    margin-top: 9rem;
+}
+
+
+.card__content article:last-child {
+  margin-bottom: 60px;
+}
+
+.card__pile < .card.dragging {
+    box-shadow: 0 0 30px rgba(226, 221, 215,.7),0 10px 40px rgba(226, 221, 215);
+} 
+
+.card__pile__tray .card, .draggable-container .card  {
+    padding:  1rem;
+    box-shadow: 0 0 10px rgba(226, 221, 215,.4),0 10px 20px rgba(226, 221, 215);
+}
+
+.card__pile .draggable-container .card__content {
+    padding: 0 !important;
+}
+
+.card__pile .card {
+    margin: 0 5rem;
+}
+
+.card__actions {
+    position: absolute;
+    bottom:0;
+    width:100%;
+    padding: 1.5em;
+    box-sizing: border-box;
+    background: white;
+}
+
+.card__actions--see-more {
+    box-shadow: 0 -5px 5px rgba(240,240,240,.5);
+    padding: .5em;
+    width: 100%;
+    text-align: center;
+}
+
+.card__actions--see-more .btn {
+    border: 1px solid #DEDDE0;
+    width: auto !important;
+    display: inline-block !important;
+    margin:  0 auto;
+    color: #6E6A79;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.card__actions .btn {
+    display: block; width:100%; 
+}
+
+.card__actions .btn--save {
+    color:#FFF; 
+    background: #5622FA;
+}
+
+.card__note {
+    background: linear-gradient(90.16deg, #E1EAFA 0.12%, #F4F7FD 99.87%);
+    border-radius: 0px 10px 10px 10px;
+    font-size: 15px;
+    color: #6D6A78;
+    padding: .1rem .75rem .15rem .75rem;
+    margin-right: .15rem;
+}
+
+.card__note a { 
+    color: #6D6A78;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Pulled from Basecamp */
 
 :root {
@@ -133,146 +267,39 @@ h2 {
     filter: invert(15%) sepia(88%) saturate(6807%) hue-rotate(257deg) brightness(96%) contrast(106%);
 }
 
-button svg { width: 20px; margin:  0; }
-
 .txt--ellipsis {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;   
 }
 
-/* New Components */
-.draggable-container--invisible > .card {
-}
-
-.draggable-container.draggable-container--invisible {
-    background: #FFF;
-    border-radius: 1rem;
-    position: relative;
-    overflow: hidden;
-    height: auto;
-}
-
-
-.card__pile {
-    
-}
-
-h2.card__pile__title {
-    font-size: 20px;
-    background: #FFF;
-    padding: 3rem 1.5rem 1rem;
-    margin-bottom: 25px !important;
-    background: #FFF;
-    font-weight: 600;
-}
-
-h2.card__pile__title:focus {
-    outline: 0;
-}
-
 ::-moz-selection { background-color: #CCBDFE;}
 ::selection { background-color: #CCBDFE; }
 
-h2.card__pile__title a {
-    text-decoration: none;
-    color: #000;
-}
-
-.card__pile h2.card__title, .card__pile .card__message {
-    display: none;
-}
-
-.card__pile__tray {
-
-    
-}
-
-.card__pile .card__pile__header {
-    position:  absolute;
-    top: 0;
-    text-align: center;
-    width: 100%;
-    z-index: 90;
-}
-
-.card__pile  .card__pile__header + .card {
-    margin-top: 9rem;
-}
-
-.card.card--hovered-over {
-    
-}
-
-.card__content article:last-child {
-  margin-bottom: 60px;
-}
-
-.card__pile < .card.dragging {
-    box-shadow: 0 0 30px rgba(226, 221, 215,.7),0 10px 40px rgba(226, 221, 215);
-} 
-
-.card__pile__tray .card, .draggable-container .card  {
-    padding:  1rem;
-    box-shadow: 0 0 10px rgba(226, 221, 215,.4),0 10px 20px rgba(226, 221, 215);
-}
-
-.card__pile .draggable-container .card__content {
-    padding: 0 !important;
-}
-
-.card__pile .card {
-    margin: 0 5rem;
-}
 
 
-.card__actions {
-    position: absolute;
-    bottom:0;
-    width:100%;
-    padding: 1.5em;
-    box-sizing: border-box;
-    background: white;
-}
 
-.card__actions--see-more {
-    box-shadow: 0 -5px 5px rgba(240,240,240,.5);
-    padding: .5em;
-    width: 100%;
-    text-align: center;
-}
 
-.card__actions--see-more .btn {
-    border: 1px solid #DEDDE0;
-    width: auto !important;
-    display: inline-block !important;
-    margin:  0 auto;
-    color: #6E6A79;
-    font-size: 16px;
-    font-weight: 500;
-}
 
-.card__actions .btn {
-    display: block; width:100%; 
-}
 
-.card__actions .btn--save {
-    color:#FFF; 
-    background: #5622FA;
-}
 
-.card__note {
-    background: linear-gradient(90.16deg, #E1EAFA 0.12%, #F4F7FD 99.87%);
-    border-radius: 0px 10px 10px 10px;
-    font-size: 15px;
-    color: #6D6A78;
-    padding: .1rem .75rem .15rem .75rem;
-    margin-right: .15rem;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* For Demo Purposes Only */
-
 #main-content {
     padding-bottom: 10rem;
 }
@@ -313,7 +340,7 @@ h2.card__pile__title a {
     width:45px; 
     height:45px; 
     border-radius:45px;
-    color:white; 
+    color: black;
     font-weight:bold;  
     display:inline-flex; 
     align-items:center; 
@@ -326,9 +353,8 @@ h2.card__pile__title a {
     height:35px; 
     border-radius:35px;
     font-size: 15px;
+    font-weight: 800;
 }
-
-
 
 .card__avatar-placeholder#avatar-1 {
     background: #02B8C9;
@@ -339,19 +365,19 @@ h2.card__pile__title a {
 }
 
 .card__avatar-placeholder#avatar-3 {
-    background: #B4540A;
+    background: #7FD322;
 }
 
 .card__avatar-placeholder#avatar-4 {
-    background: #65A20D;
+    background: #4FE3C2;
 }
 
 .card__avatar-placeholder#avatar-5 {
-    background: #5622FA;
+    background: #C649FF;
 }
 
 .card__avatar-placeholder#avatar-6 {
-    background: #124E4A;
+    background: #7FD322;
 }
 
 .card__avatar-placeholder#avatar-7 {
@@ -359,11 +385,11 @@ h2.card__pile__title a {
 }
 
 .card__avatar-placeholder#avatar-8 {
-    background: #000000;
+    background: #FE84C4;
 }
 
 .card__avatar-placeholder#avatar-9 {
-    background: #CD2E27;
+    background: #E57CFB;
 }
 
 .card__avatar-placeholder#avatar-10 {
@@ -385,9 +411,8 @@ h2.card__pile__title a {
     background: #FFCC03;
 }
 
-
 .card__avatar-placeholder#avatar-14 {
-    background: #161616;
+    background: #4FE3C2;
 }
 
 .card__avatar-placeholder#avatar-15 {
@@ -419,7 +444,10 @@ h2.card__pile__title a {
 }
 
 .card__avatar-placeholder#avatar-19 {
-    background-color: #0037FF;
+    background-color: #9D93FF;
+    background-image: url("./demo-avatars/american-airlines.jpeg");
+    background-size: 100%;
+    color: rgba(0,0,0,0);
 }
 
 .card__avatar-placeholder#avatar-20 {
@@ -438,8 +466,40 @@ h2.card__pile__title a {
     background-color: #5CEACE;
 }
 
+.card__avatar-placeholder#avatar-24 {
+    background-color: #FF5DAB;
+}
 
+.card__avatar-placeholder#avatar-25 {
+    background-color: #FF5D5D;
+}
 
+.card__avatar-placeholder#avatar-26 {
+    background-color: #E57CFB;
+}
+
+.card__avatar-placeholder#avatar-27 {
+    background-color: #F4A523;
+}
+
+.card__avatar-placeholder#avatar-28 {
+    background-color: #E57CFB;
+}
+
+.card__avatar-placeholder#avatar-29 {
+    background-color: #7BE8FB;
+    color: black;
+}
+
+.card__avatar-placeholder#avatar-30 {
+    background-color: #9D93FF;
+    color: black;
+}
+
+.card__avatar-placeholder#avatar-31 {
+    background-color: #BCFF94;
+    color: black;
+}
 
 .card__meta {
     line-height: 1.2;

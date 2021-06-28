@@ -4,11 +4,6 @@
 <head>
 	<title>HEY - Set Aside Redesign Protoype</title>
 	<link rel="stylesheet" type="text/css" href="./set-aside.css" />
-	<link rel="stylesheet" type="text/css" href="/basecamp/set-aside.css" />
-	<!--<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/basecamp/property-of-basecamp.css" />
-	<link rel="stylesheet" type="text/css" href="/basecamp/set-aside-drag-and-drop.css" />-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
@@ -51,7 +46,6 @@
 						</div>
 					</div>
 				</article>
-
 
 				<article
 					class="card card__pile u-relative">
@@ -264,6 +258,146 @@
 					</div>
 				</article>
 
+
+				<article
+					class="card draggable u-relative" 
+					draggable="true" >
+					<div class="card__content">
+						<div class="card__header">
+							<h2 class="card__title">
+								Handy Links for Friday
+							</h2>
+
+							<div class="flex flex--align-center">
+				        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+				        	<div class="card__avatar-placeholder" id="avatar-29">
+				        		BD
+				        	</div>
+								</div>
+
+				        <div class="card__meta txt--small txt--ellipsis">
+				          <span class="card__sender">
+				            Bill Davidson
+				          </span>
+
+				          <time>Jun 21</time>
+				        </div>
+							</div>
+						</div>
+
+						<div class="card__message">
+							<div class="card__note" style="font-size:19px; margin:1.5em 0;">
+								<ul>
+									<li><a href="https://inter.so">website we're reviewing</a></li>
+									<li><a href="https://inter.so">link to presentation</a></li>
+									<li><a href="https://inter.so">meeting notes for call</a></li>
+									<li><a href="https://inter.so">slide deck for pitch</a></li>
+									<li><a href="https://inter.so">information about conference</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</article>
+
+
+				<article
+					class="card card__pile u-relative">
+					<div class="card__content draggable-container">
+						<div class="card__header card__pile__header">
+							<h2 class="card__pile__title flush align--center@desktop txt--ellipsis">
+								<a href="https://robwco.github.io/basecamp/hey-set-aside-pile">🌳 Landscaping Quotes</a>
+							</h2>
+						</div>
+
+					<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Your Invoice is Ready
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-25">
+						        		DLS
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            DL Storm Landscaping Quote
+						          </span>
+
+											<span class="card__note">$1900</span>
+											<time>Jun 18</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Invoice from Quickbooks
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-24">
+						        		SA
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            San Agustin Landscaping
+						          </span>
+
+											<span class="card__note">$3500</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Invoice from Wilfredo
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-26">
+						        		WB
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Wilfredo Bautista
+						          </span>
+
+											<span class="card__note">$2500</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</article>
+
 				<article
 					class="card draggable u-relative" 
 					draggable="true" >
@@ -305,7 +439,6 @@
 								❤️ Friday Date Night</a>
 							</h2>
 						</div>
-
 
 					<article
 					class="card draggable u-relative" 
@@ -388,7 +521,7 @@
 
 						        <div class="card__meta txt--small txt--ellipsis">
 						          <span class="card__sender">
-						            Jeunette Jolie Restaurant
+						            Jeune et Jolie Restaurant
 						          </span>
 
 											<span class="card__note">@7pm - Address: 1167 7th Street</span>
@@ -400,8 +533,6 @@
 						</article>
 					</div>
 				</article>
-
-
 
 				<article
 					class="card draggable u-relative" 
@@ -444,19 +575,19 @@
 					<div class="card__content">
 						<div class="card__header">
 							<h2 class="card__title">
-								Revive Your Marriage Conference
+								Your Frontier Support Phone Call
 							</h2>
 
 							<div class="flex flex--align-center">
 				        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
 				        	<div class="card__avatar-placeholder" id="avatar-22">
-				        		PJM
+				        		FI
 				        	</div>
 								</div>
 
 				        <div class="card__meta txt--small txt--ellipsis">
 				          <span class="card__sender">
-				            Pastor John Miller
+				            Frontier Internet
 				          </span>
 
 				          <time>Jun 21</time>
@@ -465,9 +596,13 @@
 						</div>
 
 						<div class="card__message">
-							<p>Thank you for registering for the conference! Here is an itinerary for the day:</p>
-
-							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+							<div class="card__note" style="font-size:19px; margin:1.5em 0;">
+								<ul>
+									<li>Phone 888-555-756-3165</li>
+									<li>Call scheduled for Friday at 10am PST.</li>
+									<li>We’re talking about how to fix internet outage.</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</article>
@@ -478,7 +613,7 @@
 						<div class="card__header card__pile__header">
 							<h2 class="card__pile__title flush align--center@desktop txt--ellipsis">
 								<a href="https://robwco.github.io/basecamp/hey-set-aside-pile">
-									☎️ Upcoming Calls</a>
+									☎️ Upcoming Meetings</a>
 							</h2>
 						</div>
 
@@ -493,7 +628,7 @@
 
 									<div class="flex flex--align-center">
 						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
-						        	<div class="card__avatar-placeholder" id="avatar-24">
+						        	<div class="card__avatar-placeholder" id="avatar-27">
 						        		JB
 						        	</div>
 										</div>
@@ -517,22 +652,22 @@
 							<div class="card__content">
 								<div class="card__header">
 									<h2 class="card__title">
-										Applying to Basecamp
+										Shark Tank Pitch
 									</h2>
 
 									<div class="flex flex--align-center">
 						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
-						        	<div class="card__avatar-placeholder" id="avatar-12">
-						        		RW
+						        	<div class="card__avatar-placeholder" id="avatar-28">
+						        		MK
 						        	</div>
 										</div>
 
 						        <div class="card__meta txt--small txt--ellipsis">
 						          <span class="card__sender">
-						            Robert Williams
+						            Mark Cuban
 						          </span>
 
-											<span class="card__note">Mon @9am</span>
+											<span class="card__note">Mon @11am</span>
 											<time>Jun 21</time>
 						        </div>
 									</div>
@@ -546,22 +681,22 @@
 							<div class="card__content">
 								<div class="card__header">
 									<h2 class="card__title">
-										Applying to Basecamp
+										Advising Basecamp
 									</h2>
 
 									<div class="flex flex--align-center">
 						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
-						        	<div class="card__avatar-placeholder" id="avatar-12">
-						        		RW
+						        	<div class="card__avatar-placeholder" id="avatar-29">
+						        		WB
 						        	</div>
 										</div>
 
 						        <div class="card__meta txt--small txt--ellipsis">
 						          <span class="card__sender">
-						            Robert Williams
+						            Warren Buffet
 						          </span>
 
-											<span class="card__note">Mon @9am</span>
+											<span class="card__note">Mon @2pm</span>
 											<time>Jun 21</time>
 						        </div>
 									</div>
@@ -575,23 +710,23 @@
 							<div class="card__content">
 								<div class="card__header">
 									<h2 class="card__title">
-										Applying to Basecamp
+										Full name: Elongated Muskrat
 									</h2>
 
 									<div class="flex flex--align-center">
 						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
-						        	<div class="card__avatar-placeholder" id="avatar-12">
-						        		RW
+						        	<div class="card__avatar-placeholder" id="avatar-30">
+						        		EM
 						        	</div>
 										</div>
 
 						        <div class="card__meta txt--small txt--ellipsis">
 						          <span class="card__sender">
-						            Robert Williams
+						            Elon Musk
 						          </span>
 
-											<span class="card__note">Mon @9am</span>
-											<time>Jun 21</time>
+											<span class="card__note">Tues @9am</span>
+											<time>Jun 29</time>
 						        </div>
 									</div>
 								</div>
@@ -604,52 +739,23 @@
 							<div class="card__content">
 								<div class="card__header">
 									<h2 class="card__title">
-										Applying to Basecamp
+										Your Call with Virgin Enterprises
 									</h2>
 
 									<div class="flex flex--align-center">
 						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
-						        	<div class="card__avatar-placeholder" id="avatar-12">
-						        		RW
+						        	<div class="card__avatar-placeholder" id="avatar-31">
+						        		RB
 						        	</div>
 										</div>
 
 						        <div class="card__meta txt--small txt--ellipsis">
 						          <span class="card__sender">
-						            Robert Williams
+						            Richard Branson
 						          </span>
 
-											<span class="card__note">Mon @9am</span>
-											<time>Jun 21</time>
-						        </div>
-									</div>
-								</div>
-							</div>
-						</article>
-
-						<article
-							class="card draggable u-relative" 
-							draggable="true" >
-							<div class="card__content">
-								<div class="card__header">
-									<h2 class="card__title">
-										Applying to Basecamp
-									</h2>
-
-									<div class="flex flex--align-center">
-						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
-						        	<div class="card__avatar-placeholder" id="avatar-12">
-						        		RW
-						        	</div>
-										</div>
-
-						        <div class="card__meta txt--small txt--ellipsis">
-						          <span class="card__sender">
-						            Robert Williams
-						          </span>
-
-											<span class="card__note">Mon @9am</span>
-											<time>Jun 21</time>
+											<span class="card__note">Wed @11am</span>
+											<time>Jun 24</time>
 						        </div>
 									</div>
 								</div>
@@ -700,14 +806,11 @@
 									</div>
 								</div>
 
-
-
 								<div class="card__message">
 									<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 								</div>
 							</div>
 						</article>
-
 
 						<article
 							class="card draggable u-relative" 
@@ -848,7 +951,6 @@
 					</div>
 				</article>
 
-
 				<article
 					class="card card__pile u-relative">
 					<div class="card__content  draggable-container ">
@@ -959,13 +1061,47 @@
 					</div>
 				</article>
 
+				<article
+					class="card draggable u-relative" 
+					draggable="true" >
+					<div class="card__content">
+						<div class="card__header">
+							<h2 class="card__title">
+								Revive Your Marriage Conference
+							</h2>
+
+							<div class="flex flex--align-center">
+				        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+				        	<div class="card__avatar-placeholder" id="avatar-22">
+				        		PJM
+				        	</div>
+								</div>
+
+				        <div class="card__meta txt--small txt--ellipsis">
+				          <span class="card__sender">
+				            Pastor John Miller
+				          </span>
+
+				          <time>Jun 21</time>
+				        </div>
+							</div>
+						</div>
+
+						<div class="card__message">
+							<p>Thank you for registering for the conference! Here is an itinerary for the day:</p>
+
+							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+						</div>
+					</div>
+				</article>
+
 			<article
 					class="card card__pile u-relative">
 					<div class="card__content  draggable-container ">
 						<div class="card__header card__pile__header">
 							<h2 class="card__pile__title flush align--center@desktop txt--ellipsis">
 								<a href="https://robwco.github.io/basecamp/hey-set-aside-pile">
-								🥸 Funny Forwards from Dad</a>
+								🥸 Forwards from Dad</a>
 							</h2>
 						</div>
 
@@ -990,7 +1126,7 @@
 						            Dad
 						          </span>
 
-											<span class="card__note">8/10</span>
+											<span class="card__note">ಠ_ಠ</span>
 											<time>Jun 21</time>
 						        </div>
 									</div>
@@ -998,15 +1134,13 @@
 							</div>
 						</article>
 
-
-
 						<article
 							class="card draggable u-relative" 
 							draggable="true" >
 							<div class="card__content">
 								<div class="card__header">
 									<h2 class="card__title">
-										Hi Hungry, I'm Dad
+										My recliner and I go way back.
 									</h2>
 
 									<div class="flex flex--align-center">
@@ -1029,15 +1163,13 @@
 							</div>
 						</article>
 
-
-
 						<article
 							class="card draggable u-relative" 
 							draggable="true" >
 							<div class="card__content">
 								<div class="card__header">
 									<h2 class="card__title">
-										Hi Hungry, I'm Dad
+										What's brown and sticky? A stick
 									</h2>
 
 									<div class="flex flex--align-center">
@@ -1098,103 +1230,6 @@
 					</div>
 				</article>
 
-				<article
-					class="card card__pile u-relative">
-					<div class="card__content draggable-container">
-						<div class="card__header card__pile__header">
-							<h2 class="card__pile__title flush align--center@desktop txt--ellipsis">
-								<a href="https://robwco.github.io/basecamp/hey-set-aside-pile">🌳 Landscaping Quotes</a>
-							</h2>
-						</div>
-
-												<article
-							class="card draggable u-relative" 
-							draggable="true" >
-							<div class="card__content">
-								<div class="card__header">
-									<h2 class="card__title">
-										Applying to Basecamp
-									</h2>
-
-									<div class="flex flex--align-center">
-						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
-						        	<div class="card__avatar-placeholder" id="avatar-12">
-						        		RW
-						        	</div>
-										</div>
-
-						        <div class="card__meta txt--small txt--ellipsis">
-						          <span class="card__sender">
-						            Robert Williams
-						          </span>
-
-											<span class="card__note">$1200</span>
-											<time>Jun 21</time>
-						        </div>
-									</div>
-								</div>
-							</div>
-						</article>
-
-						<article
-							class="card draggable u-relative" 
-							draggable="true" >
-							<div class="card__content">
-								<div class="card__header">
-									<h2 class="card__title">
-										Applying to Basecamp
-									</h2>
-
-									<div class="flex flex--align-center">
-						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
-						        	<div class="card__avatar-placeholder" id="avatar-12">
-						        		RW
-						        	</div>
-										</div>
-
-						        <div class="card__meta txt--small txt--ellipsis">
-						          <span class="card__sender">
-						            Robert Williams
-						          </span>
-
-											<span class="card__note">$1900</span>
-											<time>Jun 21</time>
-						        </div>
-									</div>
-								</div>
-							</div>
-						</article>
-
-						<article
-							class="card draggable u-relative" 
-							draggable="true" >
-							<div class="card__content">
-								<div class="card__header">
-									<h2 class="card__title">
-										Applying to Basecamp
-									</h2>
-
-									<div class="flex flex--align-center">
-						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
-						        	<div class="card__avatar-placeholder" id="avatar-12">
-						        		RW
-						        	</div>
-										</div>
-
-						        <div class="card__meta txt--small txt--ellipsis">
-						          <span class="card__sender">
-						            Robert Williams
-						          </span>
-
-											<span class="card__note">$1500</span>
-											<time>Jun 21</time>
-						        </div>
-									</div>
-								</div>
-							</div>
-						</article>
-					</div>
-				</article>
 
 			</section>
 		</div>
@@ -1243,203 +1278,3 @@
 	</script>
 </body>
 </html>
-<!--
-			<div class="inboxes">
-				<div class="drag-and-drop" x-data="{ adding: false, removing: false }">
-					<section id="postings drag-and-drop__items" class="cards push--top">
-						<article 
-							style="display: none;"
-	            id="item-14"
-	            class="card drag-and-drop__item"
-	            :class="{ 'drag-and-drop__item--dragging': dragging }"
-	            x-on:dragstart.self="
-	                dragging = true;
-	                event.dataTransfer.effectAllowed='move';
-	                event.dataTransfer.setData('text/plain', event.target.id);
-	            "
-	            x-on:dragend="dragging = false"
-	            x-data="{ dragging: false }"
-	            draggable="true">
-	            	New Space
-
-	            	<a href="#" class="btn">Save</a>
-	            	<a href="#" class="btn">Cancel</a>
-						</article>
-
-						<article 
-	            id="item-14"
-	            class="card drag-and-drop__item"
-	            :class="{ 'drag-and-drop__item--dragging': dragging }"
-	            x-on:dragstart.self="
-	                dragging = true;
-	                event.dataTransfer.effectAllowed='move';
-	                event.dataTransfer.setData('text/plain', event.target.id);
-	            "
-	            x-on:dragend="dragging = false"
-	            x-data="{ dragging: false }"
-	            draggable="true">
-	            <div class="card__content">
-	            	<div class="card__header">
-		            	<h2 class="card__title hdg hdg--large push_quarter--top push_half--bottom txt--break-words pad--bottom@android">
-		            		Email Subject Line
-		            	</h2>
-	            	</div>
-	            </div>
-						</article>
-
-						<article class="card space drag-and-drop__container drag-and-drop__container--to align--center@desktop">	            <div class="card__content">
-	            <div class="card__content">
-	            	<div class="card__header">
-		            	<h2 class="card__title hdg hdg--large push_quarter--top push_half--bottom txt--break-words pad--bottom@android">
-		            		🚨 Itinerary for Friday
-		            	</h2>
-	            	</div>
-	            </div>
-
-							<div
-								class="drag-and-drop__items"
-		            :class="{ 'drag-and-drop__items--adding': adding }"
-		            x-on:drop="adding = false"
-		            x-on:drop.prevent="
-		                const target = event.target.closest('div');
-		                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
-		                target.appendChild(element);
-		            "
-		            x-on:dragover.prevent="adding = true"
-		            x-on:dragleave.prevent="adding = false"
-								x-on:dragover.prevent="removing = true"
-            		x-on:dragleave.prevent="removing = false"
-		            class="drag-and-drop__items"
-            		:class="{ 'drag-and-drop__items--removing': removing }"
-            		x-on:drop="removing = false"
-            		x-on:drop.prevent="
-                const id = event.dataTransfer.getData('text/plain');
-                const target = event.target.closest('ul');
-                const element = document.getElementById(id);
-                target.appendChild(element);
-            		">
-									<div
-			                id="item-13"
-			                class="card drag-and-drop__item"
-			                :class="{ 'drag-and-drop__item--dragging': dragging }"
-			                x-on:dragstart.self="
-			                    dragging = true;
-			                    event.dataTransfer.effectAllowed='move';
-			                    event.dataTransfer.setData('text/plain', event.target.id);
-			                "
-			                x-on:dragend="dragging = false"
-			                x-data="{ dragging: false }"
-			                draggable="true">
-			                Item 13
-			            </div>
-							</div>
-						</article>
-
-						<article class="card space drag-and-drop__container drag-and-drop__container--to align--center@desktop">
-					        <h3 class="drag-and-drop__title">⛺️ Basecamp Application</h3>
-					        <div
-					            class="drag-and-drop__items"
-					            :class="{ 'drag-and-drop__items--adding': adding }"
-					            x-on:drop="adding = false"
-					            x-on:drop.prevent="
-					                const target = event.target.closest('div');
-					                const element = document.getElementById(event.dataTransfer.getData('text/plain'));
-					                target.appendChild(element);
-					            "
-					            x-on:dragover.prevent="adding = true"
-					            x-on:dragleave.prevent="adding = false">
-					            
-											<div
-					                id="item-1"
-					                class="card drag-and-drop__item"
-					                :class="{ 'drag-and-drop__item--dragging': dragging }"
-					                x-on:dragstart.self="
-					                    dragging = true;
-					                    event.dataTransfer.effectAllowed='move';
-					                    event.dataTransfer.setData('text/plain', event.target.id);
-					                "
-					                x-on:dragend="dragging = false"
-					                x-data="{ dragging: false }"
-					                draggable="true">
-					                Item 1
-					            </div>
-
-	                    <div
-				                id="item-12"
-				                class="card drag-and-drop__item"
-				                :class="{ 'drag-and-drop__item--dragging': dragging }"
-				                x-on:dragstart.self="
-				                    dragging = true;
-				                    event.dataTransfer.effectAllowed='move';
-				                    event.dataTransfer.setData('text/plain', event.target.id);
-				                "
-				                x-on:dragend="dragging = false"
-				                x-data="{ dragging: false }"
-				                draggable="true">
-				                Item 12
-				            	</div>
-					        </div>
-						</article>
-					</section>
-				</div>
-			</div>
-		</div>-->
-
-
-<!--
-
-
-	<script>
-		function handleDragStart(e) {
-    this.style.opacity = '0.2';
-    this.style.border = '3px dashed #B2B2B2';
-		  dragSrcEl = this;
-	  	e.dataTransfer.effectAllowed = 'move';
-	  	e.dataTransfer.setData('text/html', this.innerHTML);
-	  }
-
-		function handleDrop(e) {
-		  e.stopPropagation();
-
-		  if (dragSrcEl !== this) {
-		    dragSrcEl.innerHTML = this.innerHTML;
-		    this.innerHTML = e.dataTransfer.getData('text/html');
-		  }
-
-		  return false;
-		}
-	  function handleDragEnd(e) {
-	    this.style.opacity = '1';
-    	this.style.border = '0';
-	    items.forEach(function (item) {
-      	item.classList.remove('card--hovered-over');
-    	});
-	  }
-
-	  function handleDragOver(e) {
-    if (e.preventDefault) {
-      e.preventDefault();
-    }
-
-	    return false;
-	  }
-
-	  function handleDragEnter(e) {
-	    this.classList.add('card--hovered-over');
-	  }
-
-	  function handleDragLeave(e) {
-	    this.classList.remove('card--hovered-over');
-	  }
-
-	  let items = document.querySelectorAll('.cards .card');
-	  items.forEach(function(item) {
-	    item.addEventListener('dragstart', handleDragStart, false);
-	    item.addEventListener('dragend', handleDragEnd, false);
-	    item.addEventListener('dragenter', handleDragEnter, false);
-    	item.addEventListener('dragleave', handleDragLeave, false);
-    	item.addEventListener('dragend', handleDragEnd, false);
-	  });
-	</script>
-
-	-->

@@ -16,7 +16,6 @@
   overflow: hidden;
   border: 2px solid purple;
   min-height: 150px;
-  padding: 0 2rem;
 }
 
 .drag-and-drop__item {
