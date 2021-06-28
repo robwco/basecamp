@@ -73,13 +73,15 @@ h2 {
     box-shadow: 0 0 3rem rgba(226, 221, 215, 0.5);
 }
 
+.card__pile .card__content {
+    overflow-y: scroll;    
+    padding: 0;
+}
+
+
 .card__content {
     padding: 1.5em;
     max-width: 100%;
-}
-
-.card__pile .card__content {
-    padding: 0;
 }
 
 .flush {
@@ -157,11 +159,24 @@ button svg { width: 20px; margin:  0; }
 }
 
 h2.card__pile__title {
-    font-size: 18px;
+    font-size: 20px;
     background: #FFF;
-    border-bottom: 1px solid #5722FA;
-    padding: 1.5rem 1.5rem;
+    padding: 3rem 1.5rem 1rem;
     margin-bottom: 25px !important;
+    background: #FFF;
+    font-weight: 600;
+}
+
+h2.card__pile__title:focus {
+    outline: 0;
+}
+
+::-moz-selection { background-color: #CCBDFE;}
+::selection { background-color: #CCBDFE; }
+
+h2.card__pile__title a {
+    text-decoration: none;
+    color: #000;
 }
 
 .card__pile h2.card__title, .card__pile .card__message {
@@ -173,8 +188,24 @@ h2.card__pile__title {
     
 }
 
+.card__pile .card__pile__header {
+    position:  absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 90;
+}
+
+.card__pile  .card__pile__header + .card {
+    margin-top: 9rem;
+}
+
 .card.card--hovered-over {
     
+}
+
+.card__content article:last-child {
+  margin-bottom: 60px;
 }
 
 .card__pile < .card.dragging {
@@ -191,7 +222,7 @@ h2.card__pile__title {
 }
 
 .card__pile .card {
-    margin: 0 1.5em;
+    margin: 0 5rem;
 }
 
 
@@ -242,8 +273,16 @@ h2.card__pile__title {
 
 /* For Demo Purposes Only */
 
+#main-content {
+    padding-bottom: 10rem;
+}
+
 .draggable-container {
-    height: 350px;
+    height: 100%;
+}
+
+.card:hover {
+    cursor: pointer;
 }
 
 .draggable {
@@ -261,7 +300,7 @@ h2.card__pile__title {
 }
 
 .draggable-container .card+.card {
-    margin-top: 5px;
+    margin-top: 7px;
 
 }
 
@@ -289,9 +328,7 @@ h2.card__pile__title {
     font-size: 15px;
 }
 
-.card__avatar-placeholder#avatar-12 {
-    background: #EF4444;
-}
+
 
 .card__avatar-placeholder#avatar-1 {
     background: #02B8C9;
@@ -300,6 +337,107 @@ h2.card__pile__title {
 .card__avatar-placeholder#avatar-2 {
     background: #5622FA;
 }
+
+.card__avatar-placeholder#avatar-3 {
+    background: #B4540A;
+}
+
+.card__avatar-placeholder#avatar-4 {
+    background: #65A20D;
+}
+
+.card__avatar-placeholder#avatar-5 {
+    background: #5622FA;
+}
+
+.card__avatar-placeholder#avatar-6 {
+    background: #124E4A;
+}
+
+.card__avatar-placeholder#avatar-7 {
+    background: #382FA3;
+}
+
+.card__avatar-placeholder#avatar-8 {
+    background: #000000;
+}
+
+.card__avatar-placeholder#avatar-9 {
+    background: #CD2E27;
+}
+
+.card__avatar-placeholder#avatar-10 {
+    background: #3399CC;
+}
+
+.card__avatar-placeholder#avatar-11 {
+    background: #736A41;
+    background-image: url("./demo-avatars/field-notes.jpeg");
+    background-size: 100%;
+    color: rgba(0,0,0,0);
+}
+
+.card__avatar-placeholder#avatar-12 {
+    background: #EF4444;
+}
+
+.card__avatar-placeholder#avatar-13 {
+    background: #FFCC03;
+}
+
+
+.card__avatar-placeholder#avatar-14 {
+    background: #161616;
+}
+
+.card__avatar-placeholder#avatar-15 {
+    background: #0232A1;    
+    background-image: url("./demo-avatars/musgrave.png");
+    background-size: 100%;
+    color: rgba(0,0,0,0);
+}
+
+.card__avatar-placeholder#avatar-16 {
+    background: #FF5D5D;
+    color: black;
+}
+
+.card__avatar-placeholder#avatar-17 {
+    background: #FF7201;
+    background-image: url("./demo-avatars/fandango.jpeg");
+    background-size: 100%;
+    color: rgba(0,0,0,0);
+    
+}
+
+.card__avatar-placeholder#avatar-18 {
+    background: #FF7201;
+    background-image: url("./demo-avatars/field-museum.png");
+    background-size: 100%;
+    color: rgba(0,0,0,0);
+    
+}
+
+.card__avatar-placeholder#avatar-19 {
+    background-color: #0037FF;
+}
+
+.card__avatar-placeholder#avatar-20 {
+    background-color: #FF5E5E;
+}
+
+.card__avatar-placeholder#avatar-21 {
+    background-color: #A8937E;
+}
+
+.card__avatar-placeholder#avatar-22 {
+    background-color: #FF5D5D;
+}
+
+.card__avatar-placeholder#avatar-23 {
+    background-color: #5CEACE;
+}
+
 
 
 

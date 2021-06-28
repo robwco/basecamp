@@ -32,21 +32,235 @@
 
 			<section class="cards push--top u-relative" id="my-list" style="margin-top:50px; box-sizing: border-box;">
 				<article
-					class="card u-relative"
+					class="card card__pile u-relative"
 					x-data="{ open: false }"
 			    x-show.transition.origin.top.left="open"
 			    @open-new-pile.window="if ($event.detail.id == 1) open = true" style="box-sizing: border-box;">
 					<div class="card__content">
-						<div class="card__header align--center@desktop">
-							<h2 class="card__title flush" contenteditable="true">
+						<div class="card__header">
+							<h2 class="card__pile__title flush align--center@desktop txt--ellipsis" contenteditable="true">
 								<span style="background-color: #CCBDFE;">New Pile</span>
 							</h2>
 						</div>
 					</div>
 					
-					<div class="card__actions">
-						<button class="btn btn--save">Save</button>
-						<button class="btn">Cancel</button>
+					<div class="card__footer">
+						<div class="card__actions">
+							<button class="btn btn--save">Save</button>
+							<button class="btn">Cancel</button>
+						</div>
+					</div>
+				</article>
+
+
+				<article
+					class="card card__pile u-relative">
+					<div class="card__content  draggable-container ">
+						<div class="card__header card__pile__header">
+							<h2 class="card__pile__title flush align--center@desktop txt--ellipsis">
+								<a href="https://robwco.github.io/basecamp/hey-set-aside-pile">📦 Tracking My Orders</a>
+							</h2>
+						</div>
+				
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										A shipment from order #6511 is on the way
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-15">
+						        		MPC
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Musgrave Pencil Company
+						          </span>
+
+											<span class="card__note">Arriving: Friday</span>
+						          <time>Jun 23</time>
+						        </div>
+									</div>
+								</div>
+
+								<div class="card__message">
+									<p>A shipment from order #6511 is on the way Musgrave Pencil Company ORDER #6511 Your order is on the way. Hurray! Your order from Musgrave Pencil is on the way. Track your shipment to see the delivery status.</p>
+								</div>
+							</div>
+						</article>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Your order #731001 has shipped and is on the way
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-8">
+						        		BM
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Buck Mason
+						          </span>
+
+											<span class="card__note">Tracking #1Z078R9RYW99755555</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+
+								<div class="card__message">
+									<p>Your order #731001 has shipped and is on the way. Your Tracking #1Z078R9RYW99755555. *Please allow up to 48 hours for tracking information to be updated by the carrier.</p>
+								</div>
+							</div>
+						</article>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Your Patagonia order has shipped
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-14">
+						        		P
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Patagonia
+						          </span>
+
+											<span class="card__note">Arriving: Wednesday</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+
+								<div class="card__message">
+									<p>Your order has shipped. Thanks for shopping with us. The items listed below shipped on 03/02/2021.</p>
+								</div>
+							</div>
+						</article>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Your Duluth Items Just Shipped
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-9">
+						        		DTC
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Duluth Trading Customer Service
+						          </span>
+						          <time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+
+								<div class="card__message">
+									<p>Hi Robert, Your Duluth order has shipped. TRACK YOUR ORDER Order Details Best Made 12" Strongbox Color: Classic Red Quantity: 1</p>
+								</div>
+							</div>
+						</article>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Your Order Has Shipped
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-10">
+						        		NB
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            New Balance
+						          </span>
+						          <time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+
+								<div class="card__message">
+									<p>It's On The Way. Hi Robert Williams, We've shipped your order via UPS Ground Click the link below to see when it will arrive. TRACK YOUR ORDER Thank you again for shopping on newbalance.com</p>
+								</div>
+							</div>
+						</article>
+
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Your Order #115923841 has shipped
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-13">
+						        		TMO
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Thrive Market Orders
+						          </span>
+
+						          <time>Jun 23</time>
+						        </div>
+									</div>
+								</div>
+
+								<div class="card__message">
+									<p>Your order has shipped. Hi Robert, we just shipped a package for order #115923841. If you have any questions about your order, please contact us. Thanks again for shopping with us. We'll contact you again when it's time to review your next box.</p>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="card__footer">
+						<div class="card__actions card__actions--see-more">
+							<a href="https://robwco.github.io/basecamp/hey-set-aside-pile"><button class="btn">More...</button></a>
+						</div>
 					</div>
 				</article>
 
@@ -56,19 +270,193 @@
 					<div class="card__content">
 						<div class="card__header">
 							<h2 class="card__title">
-								Applying to Basecamp
+								Field Notes Shipment Notification
 							</h2>
 
 							<div class="flex flex--align-center">
 				        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
-				        	<div class="card__avatar-placeholder" id="avatar-1">
-				        		JZ
+				        	<div class="card__avatar-placeholder" id="avatar-11">
+				        		FN
 				        	</div>
 								</div>
 
 				        <div class="card__meta txt--small txt--ellipsis">
 				          <span class="card__sender">
-				            Jason Zimdars
+				            Field Notes
+				          </span>
+
+				          <time>Jun 23</time>
+				        </div>
+							</div>
+						</div>
+
+						<div class="card__message">
+							<p>We will be packing your order shortly and shipping to the address below. Please reply to this email ASAP if you need to change the delivery address. Your order will also include 1 FREE Red Heart Clic Pen for ordering today. Thanks for that. Order 229639e4896effed135c9b227c70bc59</p>
+						</div>
+					</div>
+				</article>
+
+				<article
+					class="card card__pile u-relative">
+					<div class="card__content  draggable-container ">
+						<div class="card__header card__pile__header">
+							<h2 class="card__pile__title flush align--center@desktop txt--ellipsis">
+								<a href="https://robwco.github.io/basecamp/hey-set-aside-pile">
+								❤️ Friday Date Night</a>
+							</h2>
+						</div>
+
+
+					<article
+					class="card draggable u-relative" 
+					draggable="true" >
+					<div class="card__content">
+						<div class="card__header">
+							<h2 class="card__title">
+								Download Your Museum Tickets
+							</h2>
+
+							<div class="flex flex--align-center">
+				        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+				        	<div class="card__avatar-placeholder" id="avatar-18">
+				        		FM
+				        	</div>
+								</div>
+
+				        <div class="card__meta txt--small txt--ellipsis">
+				          <span class="card__sender">
+				            Field Museum
+				          </span>
+									
+									<span class="card__note">@3pm - Museum opens</span>
+
+				          <time>Jun 24</time>
+				        </div>
+							</div>
+						</div>
+
+						<div class="card__message">
+							<p>Thank you for your purchase. You're all set to join us on July 3nd at 3pm PST. Present these tickets: <a href="#">Click to download your tickets here.</a></p>
+						</div>
+					</div>
+				</article>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Movie Screening Confirmation
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-17">
+						        		FM
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Fandango Movies
+						          </span>
+
+											<span class="card__note">@5pm - Address: 26252 Barrack</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Your Reservation is booked
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-16">
+						        		JJ
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Jeunette Jolie Restaurant
+						          </span>
+
+											<span class="card__note">@7pm - Address: 1167 7th Street</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</article>
+
+
+
+				<article
+					class="card draggable u-relative" 
+					draggable="true" >
+					<div class="card__content">
+						<div class="card__header">
+							<h2 class="card__title">
+								Rails Developer Position
+							</h2>
+
+							<div class="flex flex--align-center">
+				        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+				        	<div class="card__avatar-placeholder" id="avatar-1">
+				        		JF
+				        	</div>
+								</div>
+
+				        <div class="card__meta txt--small txt--ellipsis">
+				          <span class="card__sender">
+				            Jason Forrest
+				          </span>
+
+				          <time>Jun 24</time>
+				        </div>
+							</div>
+						</div>
+
+						<div class="card__message">
+							<p>Hi Jason and David,</p>
+							<p>I'm a rails developer currently looking to join Basecamp!</p>
+							<p>-Jason</p>
+							<p>On June 21, 2021, Jason Fried jason@hey.com wrote:</p>
+						</div>
+					</div>
+				</article>
+
+				<article
+					class="card draggable u-relative" 
+					draggable="true" >
+					<div class="card__content">
+						<div class="card__header">
+							<h2 class="card__title">
+								Revive Your Marriage Conference
+							</h2>
+
+							<div class="flex flex--align-center">
+				        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+				        	<div class="card__avatar-placeholder" id="avatar-22">
+				        		PJM
+				        	</div>
+								</div>
+
+				        <div class="card__meta txt--small txt--ellipsis">
+				          <span class="card__sender">
+				            Pastor John Miller
 				          </span>
 
 				          <time>Jun 21</time>
@@ -77,10 +465,9 @@
 						</div>
 
 						<div class="card__message">
-							<p>Wonderful, thanks!</p>
-							<p>Happy Father's Day to you as well.</p>
-							<p>-Jason</p>
-							<p>On June 21, 2021, Robert Williams robert.williams@hey.com wrote: You are my friend you are special.</p>
+							<p>Thank you for registering for the conference! Here is an itinerary for the day:</p>
+
+							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 						</div>
 					</div>
 				</article>
@@ -88,9 +475,201 @@
 				<article
 					class="card card__pile u-relative">
 					<div class="card__content  draggable-container ">
-						<div class="card__header">
-							<h2 class="card__pile__title flush align--center@desktop">
-								⛺️ Basecamp Applicants
+						<div class="card__header card__pile__header">
+							<h2 class="card__pile__title flush align--center@desktop txt--ellipsis">
+								<a href="https://robwco.github.io/basecamp/hey-set-aside-pile">
+									☎️ Upcoming Calls</a>
+							</h2>
+						</div>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Amazon Space Exploration
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-24">
+						        		JB
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Jeff Bezos
+						          </span>
+
+											<span class="card__note">Mon @9am</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Applying to Basecamp
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-12">
+						        		RW
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Robert Williams
+						          </span>
+
+											<span class="card__note">Mon @9am</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Applying to Basecamp
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-12">
+						        		RW
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Robert Williams
+						          </span>
+
+											<span class="card__note">Mon @9am</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Applying to Basecamp
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-12">
+						        		RW
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Robert Williams
+						          </span>
+
+											<span class="card__note">Mon @9am</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Applying to Basecamp
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-12">
+						        		RW
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Robert Williams
+						          </span>
+
+											<span class="card__note">Mon @9am</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Applying to Basecamp
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-12">
+						        		RW
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Robert Williams
+						          </span>
+
+											<span class="card__note">Mon @9am</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="card__footer">
+						<div class="card__actions card__actions--see-more">
+							<a href="https://robwco.github.io/basecamp/hey-set-aside-pile"><button class="btn">More...</button></a>
+						</div>
+					</div>
+				</article>
+
+				<article
+					class="card card__pile u-relative">
+					<div class="card__content  draggable-container ">
+						<div class="card__header card__pile__header">
+							<h2 class="card__pile__title flush align--center@desktop txt--ellipsis">
+								<a href="https://robwco.github.io/basecamp/hey-set-aside-pile">⛺️ Basecamp Summer Hiring</a>
 							</h2>
 						</div>
 
@@ -115,7 +694,7 @@
 						            Robert Williams
 						          </span>
 
-											<span class="card__note">Test Project Sent</span>
+											<span class="card__note">Reviewing Test Project</span>
 											<time>Jun 21</time>
 						        </div>
 									</div>
@@ -136,22 +715,22 @@
 							<div class="card__content">
 								<div class="card__header">
 									<h2 class="card__title">
-										Applying to Basecamp
+										Rails Developer Position
 									</h2>
 
 									<div class="flex flex--align-center">
 						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
-						        	<div class="card__avatar-placeholder" id="avatar-2">
-						        		JF
+						        	<div class="card__avatar-placeholder" id="avatar-3">
+						        		FR						        	
 						        	</div>
 										</div>
 
 						        <div class="card__meta txt--small txt--ellipsis">
 						          <span class="card__sender">
-						            Jason Fried
+						            Francisco Rodriguez
 						          </span>
 
-											<span class="card__note">Test Project Sent</span>
+											<span class="card__note">Waiting for Test Project</span>
 						          <time>Jun 21</time>
 						        </div>
 									</div>
@@ -169,19 +748,19 @@
 							<div class="card__content">
 								<div class="card__header">
 									<h2 class="card__title">
-										Applying to Basecamp
+										Designer Application
 									</h2>
 
 									<div class="flex flex--align-center">
 						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
-						        	<div class="card__avatar-placeholder" id="avatar-2">
-						        		JF
+						        	<div class="card__avatar-placeholder" id="avatar-4">
+						        		BM
 						        	</div>
 										</div>
 
 						        <div class="card__meta txt--small txt--ellipsis">
 						          <span class="card__sender">
-						            Jason Fried
+						            Benny McDonald
 						          </span>
 
 											<span class="card__note">Interview: June 29th</span>
@@ -207,18 +786,18 @@
 
 									<div class="flex flex--align-center">
 						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
-						        	<div class="card__avatar-placeholder" id="avatar-2">
-						        		JF
+						        	<div class="card__avatar-placeholder" id="avatar-5">
+						        		ZH
 						        	</div>
 										</div>
 
 						        <div class="card__meta txt--small txt--ellipsis">
 						          <span class="card__sender">
-						            Jason Fried
+						            Zach Hall
 						          </span>
 
-											<span class="card__note">Interview: June 29th</span>
-						          <time>Jun 21</time>
+											<span class="card__note">Interview: June 26th, 7am PST</span>
+						          <time>Jun 23</time>
 						        </div>
 									</div>
 								</div>
@@ -240,17 +819,17 @@
 
 									<div class="flex flex--align-center">
 						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
-						        	<div class="card__avatar-placeholder" id="avatar-2">
-						        		JF
+						        	<div class="card__avatar-placeholder" id="avatar-6">
+						        		KS
 						        	</div>
 										</div>
 
 						        <div class="card__meta txt--small txt--ellipsis">
 						          <span class="card__sender">
-						            Jason Fried
+						            Kevin Smyth
 						          </span>
 
-						          <time>Jun 21</time>
+						          <time>Jun 23</time>
 						        </div>
 									</div>
 								</div>
@@ -260,9 +839,11 @@
 								</div>
 							</div>
 						</article>
+					</div>
 
+					<div class="card__footer">
 						<div class="card__actions card__actions--see-more">
-							<button class="btn">See more...</button>
+							<a href="https://robwco.github.io/basecamp/hey-set-aside-pile"><button class="btn">More...</button></a>
 						</div>
 					</div>
 				</article>
@@ -270,17 +851,351 @@
 
 				<article
 					class="card card__pile u-relative">
-					<div class="card__content draggable-container">
-						<div class="card__header">
-							<h2 class="card__pile__title flush align--center@desktop">
-								🚨 Reservations for Friday
+					<div class="card__content  draggable-container ">
+						<div class="card__header card__pile__header">
+							<h2 class="card__pile__title flush align--center@desktop txt--ellipsis">
+								<a href="https://robwco.github.io/basecamp/hey-set-aside-pile">❄️ Winter 2021 Trip Info</a>
 							</h2>
 						</div>
 
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Your Seat on Flight 2021 Has Been Reserved
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-19">
+						        		AA
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            American Airlines
+						          </span>
+
+											<span class="card__note">Flight 2021</span>
+						          <time>Jun 27</time>
+						        </div>
+									</div>
+								</div>
+
+								<div class="card__message">
+									<p>We will be packing your order shortly and shipping to the address below. Please reply to this email ASAP if you need to change the delivery address. Your order will also include 1 FREE Red Heart Clic Pen for ordering today. Thanks for that. Order 229639e4896effed135c9b227c70bc59</p>
+								</div>
+							</div>
+						</article>
+
+							<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Your Private Ice Skating Lessons is Booked
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-20">
+						        		IRA
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Ice Rink A Go-GO
+						          </span>
+
+											<span class="card__note">Private lessons with Brad</span>
+						          <time>Jun 27</time>
+						        </div>
+									</div>
+								</div>
+
+								<div class="card__message">
+									<p>We will be packing your order shortly and shipping to the address below. Please reply to this email ASAP if you need to change the delivery address. Your order will also include 1 FREE Red Heart Clic Pen for ordering today. Thanks for that. Order 229639e4896effed135c9b227c70bc59</p>
+								</div>
+							</div>
+						</article>
+
+							<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Your December 21 Hotel Stay with us
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-23">
+						        		CPH
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Crown Plaza Hotel
+						          </span>
+
+											<span class="card__note">Check-in Dec. 21 4pm</span>
+						          <time>Jun 27</time>
+						        </div>
+									</div>
+								</div>
+
+								<div class="card__message">
+									<p>We will be packing your order shortly and shipping to the address below. Please reply to this email ASAP if you need to change the delivery address. Your order will also include 1 FREE Red Heart Clic Pen for ordering today. Thanks for that. Order 229639e4896effed135c9b227c70bc59</p>
+								</div>
+							</div>
+						</article>
 					</div>
 				</article>
 
-				<div class="draggable-container draggable-container--invisible"></div>
+			<article
+					class="card card__pile u-relative">
+					<div class="card__content  draggable-container ">
+						<div class="card__header card__pile__header">
+							<h2 class="card__pile__title flush align--center@desktop txt--ellipsis">
+								<a href="https://robwco.github.io/basecamp/hey-set-aside-pile">
+								🥸 Funny Forwards from Dad</a>
+							</h2>
+						</div>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Hi Hungry, I'm Dad
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-21">
+						        		D
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Dad
+						          </span>
+
+											<span class="card__note">8/10</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Hi Hungry, I'm Dad
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-21">
+						        		D
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Dad
+						          </span>
+
+											<span class="card__note">7/10</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Hi Hungry, I'm Dad
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-21">
+						        		D
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Dad
+						          </span>
+
+											<span class="card__note">Golf clap</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Hi Hungry, I'm Dad
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-21">
+						        		D
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Dad
+						          </span>
+
+											<span class="card__note">🤦‍♂️</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="card__footer">
+						<div class="card__actions card__actions--see-more">
+							<a href="https://robwco.github.io/basecamp/hey-set-aside-pile"><button class="btn">More...</button></a>
+						</div>
+					</div>
+				</article>
+
+				<article
+					class="card card__pile u-relative">
+					<div class="card__content draggable-container">
+						<div class="card__header card__pile__header">
+							<h2 class="card__pile__title flush align--center@desktop txt--ellipsis">
+								<a href="https://robwco.github.io/basecamp/hey-set-aside-pile">🌳 Landscaping Quotes</a>
+							</h2>
+						</div>
+
+												<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Applying to Basecamp
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-12">
+						        		RW
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Robert Williams
+						          </span>
+
+											<span class="card__note">$1200</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Applying to Basecamp
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-12">
+						        		RW
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Robert Williams
+						          </span>
+
+											<span class="card__note">$1900</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article
+							class="card draggable u-relative" 
+							draggable="true" >
+							<div class="card__content">
+								<div class="card__header">
+									<h2 class="card__title">
+										Applying to Basecamp
+									</h2>
+
+									<div class="flex flex--align-center">
+						        <div class="card__avatar bulk-actions__trigger btn--plain flush u-relative">
+						        	<div class="card__avatar-placeholder" id="avatar-12">
+						        		RW
+						        	</div>
+										</div>
+
+						        <div class="card__meta txt--small txt--ellipsis">
+						          <span class="card__sender">
+						            Robert Williams
+						          </span>
+
+											<span class="card__note">$1500</span>
+											<time>Jun 21</time>
+						        </div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</article>
+
 			</section>
 		</div>
 	</main>
@@ -328,8 +1243,6 @@
 	</script>
 </body>
 </html>
-
-
 <!--
 			<div class="inboxes">
 				<div class="drag-and-drop" x-data="{ adding: false, removing: false }">
