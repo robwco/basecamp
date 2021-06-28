@@ -13,7 +13,6 @@ h2.card__pile__title:focus {
     outline: 0;
 }
 
-
 h2.card__pile__title a {
     text-decoration: none;
     color: #000;
@@ -34,7 +33,6 @@ h2.card__pile__title a {
 .card__pile  .card__pile__header + .card {
     margin-top: 9rem;
 }
-
 
 .card__content article:last-child {
   margin-bottom: 60px;
@@ -103,7 +101,7 @@ h2.card__pile__title a {
 
 .card__note a { 
     color: #6D6A78;
- }
+}
 
 
 
