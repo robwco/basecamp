@@ -42,7 +42,7 @@ h2.card__pile__title a {
     box-shadow: 0 0 30px rgba(226, 221, 215,.7),0 10px 40px rgba(226, 221, 215);
 } 
 
-.card__pile__tray .card, .draggable-container .card  {
+.draggable-container .card  {
     padding:  1rem;
     box-shadow: 0 0 10px rgba(226, 221, 215,.4),0 10px 20px rgba(226, 221, 215);
 }
